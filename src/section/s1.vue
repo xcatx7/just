@@ -1,17 +1,44 @@
 <template>
   <article class="s1">
-    <img src="./s1/1.png" class="img1" alt="" />
-    <img src="./s1/2.png" class="img2" alt="" />
-    <img src="./s1/3.png" class="img3" alt="" />
+    <!--  
 
+
+    -->
+    <img src="./s1/pc.jpg" class="t0" alt="" />  
+    <img src="./s1/leaf.png" class="leaf" alt="" />
+    <img src="./s1/box1.png" class="box1" alt="" />
+    <img src="./s1/box2.png" class="box2" alt="" />
+    <img src="./s1/flower2.png" class="flower2" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <img src="./s1/building.png" class="building" alt="" />
+    <div class="txt">
     <img
-      src="./s1/logo.png"
+      src="./s1/logo.svg"
       class="logo"
       alt=""
       data-aos="zoom-in"
       data-aos-delay="500"
       data-aos-duration="1600"
     />
+    <img
+      src="./s1/t1.svg"
+      class="t1"
+      alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600"
+    />
+    <img
+      src="./s1/t2.svg"
+      class="t2"
+      alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600"
+    />
+    </div>
   </article>
 </template>
 
@@ -19,8 +46,8 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  @apply relative w-full h-screen z-10;
-  min-height: size(900);
+  @apply relative w-full h-screen;
+  min-height: size(1080);
   max-height: size(1080);
   height: 100vh;
   display: flex;
@@ -31,21 +58,48 @@
   color: #fff;
   line-height: 1.3;
   font-weight: 700;
+  // overflow: hidden;
+
+  .t0{
+    position: absolute;
+    top: 0;left: 0;width: 100%;opacity: .3;pointer-events: none;z-index: 50;
+  }
  // background-image: url("@/section/s1/bg1.jpg");
  // background-position: top center;
  // background-size: 100%;
-
+.leaf{
+    @apply absolute;top: 0;left: size(-15);width: size(690);
+    transform: skewY(-3deg);transform-origin: 0 0;
+  
+    animation: an1 3s ease-in-out alternate infinite;}
+.box1{
+    @apply absolute;top:size(380);left:size(490);width: size(23);}
+.box2{
+    @apply absolute;top:size(300);right:size(580);width: size(23);}
+.flower2{
+    @apply absolute;bottom:size(100);right:size(455);width: size(290);}
+.building{
+    @apply absolute;bottom:size(-55);right:size(-0);
+    width: size(535);}
   .bg {
     @apply absolute w-full z-0;
   }
+  .txt{
+    @apply absolute z-10;
+    display: flex;
+  flex-direction: column;
+    top: calc(50% + #{size(320-(1080 * 0.5))});}
 
   .logo {
-    @apply z-10;
-    position: absolute;
-    top: size(280);
-    left: size(675);
-    top: calc(50% + #{size(280-(1080 * 0.5))});
-    width: size(556);
+    width: size(545);
+    margin-bottom: 1em;
+  }
+  .t1 {
+    width: size(550);
+    margin-bottom: .7em;
+  }
+  .t2 {
+    width: size(555);
   }
 
   @keyframes an1 {

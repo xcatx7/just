@@ -1,6 +1,6 @@
 <template>
     <div class="viewbox" ref="viewbox">
-        <img class="view1" ref="viewImg" src="@/section/s2/view.webp" alt="" srcset="">
+        <img class="view1" ref="viewImg" src="@/section/s2/map.jpg" alt="" srcset="">
         
         <div class="mask" v-bind:class="{ hide: swiped }">
             <img 

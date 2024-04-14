@@ -1,115 +1,19 @@
 <template>
   <article class="s3">
-    <div class="slide-box s31">
-      <Splide
-        ref="splide"
-        class="slide"
-        :options="{
-          arrows: false,
-          autoplay: true,
-          pagination: true,
-          interval: 4000,
-          gap: 10,
-          type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgsA"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-      <div class="t">
-        <div class="t1" v-if="isMobile">清溪川首排<br />綠金十字軸</div>
-        <div class="t1" v-else>清溪川首排 綠金十字軸</div>
-        <div class="t2">奢擁都心，奢享謐境</div>
-        <div class="t3">
-          與自然相棲，與藝文相伴，列席首爾清溪川美譽的中港綠堤第一排，開闊的不只是視野的永恆棟距，林濤濃蔭，滿窗翠綠，水域風光，綿延串起1.4公頃溫仔圳濕地公園、昌平公園、願景公園、國家電影文化園區、昌平國小、頭前國中明星學區，繁華裡藏奢綠，四季裡有斑斕，藝文書香裡自在漫居。
-        </div>
-      </div>
+    <img src="./s1/flower1.png" class="flower1" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <img src="./s1/flower2.png" class="flower2" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <img src="./s3/en.svg" class="en">
+    <div class="view">
+      <fullview />
     </div>
-    <div class="slide-box s32">
-      <Splide
-        ref="splide2"
-        class="slide"
-        :options="{
-          arrows: false,
-          autoplay: true,
-          interval: 4000,
-          gap: 10,
-          type: 'loop',
-          arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
-        }"
-      >
-        <SplideSlide
-          class="slide-item"
-          :key="i"
-          v-for="i in imgsB"
-          :style="{ 'background-image': `url(${i.img})` }"
-        >
-          <div class="caption">
-            {{ i.caption }}
-          </div>
-        </SplideSlide>
-      </Splide>
-      <div class="t">
-        <div class="t1">雙大道樞紐 雙商圈核心</div>
-        <div class="t2">大道即是價值，稀缺更顯珍貴</div>
-        <div class="t3">
-          大道即是價值，稀缺更顯珍貴，中原X中華雙大道十字金軸的鑽石角地新舊商圈交融的市街文化，副都心的時尚，舊新莊的豐饒，織就「文華苑」美好的生活地圖。宏匯廣場i-Tower、晶鑽購物中心時尚、影視潮流脈動，連結著中原傳統市場的生猛活力，一步行履街頭小吃、市場採買、百貨商場國際美食，時尚咖、文青族、食藝家…都能在此邂逅所愛。
-        </div>
-      </div>
-    </div>
-    <img src="@/section/s3/lt1.png" class="lt lt1" alt="" srcset="" />
-    <img
-      v-if="!isMobile"
-      src="@/section/s3/lt2.png"
-      class="lt lt2"
-      alt=""
-      srcset=""
-    />
-    <img v-else src="@/section/s3/lt2m.png" class="lt lt2" alt="" srcset="" />
-    <img src="@/section/s3/f1.webp" class="lt f f1" alt="" srcset="" />
-    <img src="@/section/s3/f2.webp" class="lt f f2" alt="" srcset="" />
-
-    <div class="arrows" v-if="isMobile">
-      <img
-        src="@/section/arrow.png"
-        class="arrow prev"
-        alt=""
-        srcset=""
-        @click="splide.go('<')"
-      />
-      <img
-        src="@/section/arrow.png"
-        class="arrow next"
-        alt=""
-        srcset=""
-        @click="splide.go('>')"
-      />
-    </div>
-
-    <div class="arrows2" v-if="isMobile">
-      <img
-        src="@/section/arrow.png"
-        class="arrow prev"
-        alt=""
-        srcset=""
-        @click="splide2.go('<')"
-      />
-      <img
-        src="@/section/arrow.png"
-        class="arrow next"
-        alt=""
-        srcset=""
-        @click="splide2.go('>')"
-      />
+    <div class="t">
+      <div class="t1 " >繁華映綠 文教馥域</div>
     </div>
   </article>
 </template>
@@ -118,124 +22,41 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  @apply relative w-full z-20 flex flex-col items-center justify-center;
-  height: size(1480);
-  background-color: #efefef;
-  gap: size(25);
-  padding-right: size(225);
+  @apply relative w-full z-0;
+  height: size(930);
+  font-size: size(15);
+  .en{
+    @apply absolute;
+    top:size(30);
+    right: size(120);
+    width:size(500) ;
+  }
+.flower1{
+    @apply absolute;top:size(-155);left: size(-265);width: size(585);z-index: 21;}
+    
+.flower2{
+    @apply absolute;top:size(-75);left:size(305);width: size(285);z-index: 21;}
 
-  .slide-box {
-    @apply flex items-end;
-    gap: size(94);
-    .slide {
-      width: size(778);
-      height: size(521);
-      .slide-item {
-        width: size(778);
-        height: size(521);
-        background: #eee;
-        background-size: cover;
-        .caption {
-          @apply absolute;
-          left: size(29);
-          bottom: size(14);
-          color: #fff;
-          font-size: size(14);
-          font-weight: 400;
-        }
-      }
-      .splide__pagination {
-        @apply absolute right-0 w-full flex justify-end;
-        padding: size(16) 0;
-        li {
-          line-height: 0;
-          button {
-            width: size(42);
-            height: size(5);
-            background: #ebbf55;
-            opacity: 0.4;
-            &.is-active {
-              opacity: 1;
-            }
-          }
-        }
-        gap: size(15);
-      }
-    }
-    .t {
-      width: size(470);
-      .t1 {
-        color: #c9a063;
-        font-size: size(45);
-        font-weight: 700;
-        margin-bottom: size(15);
-      }
-      .t2 {
-        color: #000;
-        font-size: size(23);
-        font-weight: 500;
-        margin-bottom: size(5);
-      }
-      .t3 {
-        color: #000;
-        font-size: size(16);
-        font-weight: 400;
-        text-align: justify;
-      }
-    }
-    &:nth-child(1) {
-      .slide {
-        .splide__pagination {
-          @apply bottom-full;
-        }
-      }
-    }
-    &:nth-child(2) {
-      .slide {
-        .splide__pagination {
-          @apply top-full;
-        }
-      }
+  .t {
+    @apply absolute z-20 text-white;
+    top: size(135);
+    width: size(900);
+    left:0;
+    right: 0;
+    margin: 0 auto;
+    .t1 {
+      @apply text-center  font-['Noto_Serif_TC'];
+      font-size: size(44);
+      font-weight: 700;
+      color: #367E7C;
+      margin-bottom: .1em;
     }
   }
 
-  .lt {
-    @apply absolute z-10 pointer-events-none;
-    &.lt1 {
-      width: size(372);
-      top: size(232);
-      right: size(116);
-    }
-
-    &.lt2 {
-      width: size(578);
-      bottom: size(83);
-      left: size(457);
-    }
-    &.f1 {
-      width: size(568);
-      right: 0;
-      top: size(169);
-      transform-origin: right;
-    }
-    &.f2 {
-      width: size(540);
-      left: 0;
-      bottom: -#{size(310)};
-      transform-origin: left;
-    }
-
-    &.f {
-      animation: swin 3s infinite alternate-reverse ease-in-out;
-      @keyframes swin {
-        from {
-          transform: skewY(-6deg);
-        }
-        to {
-          transform: skewY(3deg);
-        }
-      }
-    }
+  .view {
+    @apply w-full absolute bottom-0 left-0 right-0 z-20;
+    width: size(1280);
+    height: size(750);margin: auto;
   }
 }
 
@@ -246,161 +67,119 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    @apply relative w-full z-20 flex flex-col items-center justify-center;
-    height: sizem(1439);
-    gap: sizem(60);
-    padding-right: sizem(27.5);
-    padding-left: sizem(27.5);
-
-    .slide-box {
-      @apply flex items-end;
-      gap: sizem(35);
-      .slide {
-        @apply w-full;
-        height: sizem(227.69);
-        .slide-item {
-          @apply w-full;
-          height: sizem(227.69);
-          .caption {
-            left: sizem(12);
-            bottom: sizem(6);
-            font-size: sizem(12);
-          }
-        }
-        .splide__pagination {
-          @apply hidden;
-        }
-      }
-      .t {
-        @apply w-full;
-        .t1 {
-          font-size: sizem(25);
-          margin-bottom: sizem(10);
-        }
-        .t2 {
-          font-size: sizem(16);
-          margin-bottom: sizem(10);
-        }
-        .t3 {
-          font-size: sizem(14);
-        }
-      }
-      &:nth-child(1) {
-        @apply flex-col-reverse;
-      }
-      &:nth-child(2) {
-        @apply flex-col;
-      }
+    height: sizem(1920);
+    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+  
+   // background: #1b527a;
+    &::after {
+      @apply absolute w-full h-full z-10;
+      content: "";
+    //  background-image: url("@/section/s2/bgm.jpg");
+      background-position: top;
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
 
-    .lt {
-      @apply absolute z-10 pointer-events-none;
-      &.lt1 {
-        width: sizem(237);
-        top: sizem(50);
-        right: sizem(110.5);
-      }
-
-      &.lt2 {
-        width: sizem(181.53);
-        bottom: sizem(47.2);
-        left: sizem(166);
-      }
-      &.f1 {
+    .splide {
+      @apply absolute w-full z-20;
+      height: sizem(190);
+      top: sizem(500);
+      .splide__slide {
+        @apply relative cursor-pointer;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: sizem(190);
         width: sizem(190);
-        top: -#{sizem(50)};
-      }
-      &.f2 {
-        width: sizem(170);
-        bottom: -#{sizem(60)};
-      }
-
-      &.f {
-        animation: swin 3s infinite alternate-reverse ease-in-out;
-        @keyframes swin {
-          from {
-            transform: skewY(-6deg);
-          }
-          to {
-            transform: skewY(3deg);
-          }
+        &:nth-child(1) {
+          bottom: size(40);
+        }
+        &:nth-child(2) {
+          bottom: size(10);
+        }
+        &:nth-child(3) {
+          bottom: size(100);
+        }
+        &:nth-child(4) {
+          bottom: size(40);
+        }
+        &:nth-child(6) {
+          bottom: size(30);
         }
       }
     }
+    .leaf-img {
+      @apply absolute z-20;
+      width: sizem(330);
+      top: sizem(700);
+      left: sizem(22.5);
+    }
+    .leaf-arrow {
+      @apply absolute z-20;
+      top: sizem(950);
+      right: sizem(22.5);
+    }
+    .gor,.gol{
+      @apply absolute z-20;
+      top: sizem(500);
+      right: 0;
+      width:  sizem(100);height:  sizem(750);
+    }
+    .gol{
+      left: 0;height:  sizem(200);
+    }
 
-    .arrows {
-      @apply absolute z-20 -translate-y-1/2 flex justify-between;
-      top: sizem(580);
-      width: sizem(350);
-
-      .arrow {
-        @apply cursor-pointer;
-        width: sizem(30);
-        height: sizem(30);
-        &.prev {
-          transform: scaleX(-1);
-        }
+    .t {
+      @apply absolute z-20 text-white;
+      top: sizem(100);
+      width: sizem(300);
+      left: sizem(37.5);
+      .t1 {
+        font-size: sizem(30);
+        margin-bottom: sizem(20);
+      }
+      .t2 {
+        font-size: sizem(14);
+        font-weight: 400;
+        width: 100%;
+        margin-bottom: sizem(20);
+      }
+      .t3 {
+        font-size: sizem(16);
+        font-weight: 500;
       }
     }
 
-    .arrows2 {
-      @apply absolute z-20 -translate-y-1/2 flex justify-between;
-      top: sizem(870);
-      width: sizem(350);
-
-      .arrow {
-        @apply cursor-pointer;
-        width: sizem(30);
-        height: sizem(30);
-        &.prev {
-          transform: scaleX(-1);
-        }
-      }
+    .view {
+      height: sizem(900);
     }
   }
 }
 </style>
 
 <script setup>
+import fullview from "@/components/fullview2.vue"
 import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
 const globals = getCurrentInstance().appContext.config.globalProperties
 
 const smoothScroll = inject("smoothScroll")
 const isMobile = computed(() => globals.$isMobile())
 
-const splide = ref()
-const splide2 = ref()
+const activeLeaf = ref(1)
 
-const imgsA = [
-  {
-    img: new URL("../section/s3/a1.webp", import.meta.url).href,
-    caption: "塭仔圳溼地公園",
-  },
-  {
-    img: new URL("../section/s3/a2.webp", import.meta.url).href,
-    caption: "塭仔圳溼地公園",
-  },
-  {
-    img: new URL("../section/s3/a3.webp", import.meta.url).href,
-    caption: "中港綠堤",
-  },
-  {
-    img: new URL("../section/s3/a4.webp", import.meta.url).href,
-    caption: "昌平公園",
-  },
-  {
-    img: new URL("../section/s3/a5.webp", import.meta.url).href,
-    caption: "願景公園",
-  },
-]
-const imgsB = [
-  {
-    img: new URL("../section/s3/b1.webp", import.meta.url).href,
-    caption: "iTower新莊創新園區",
-  },
-  {
-    img: new URL("../section/s3/b2.webp", import.meta.url).href,
-    caption: "宏匯廣場",
-  },
-]
+const splide = ref()
+
+const move = (idx1, idx2, dest) => {
+  activeLeaf.value = idx2 + 1
+}
+
+const replaceBg = (isHover, event, index) => {
+  const target = event.target
+  const bgUrl = isHover
+    ? target.getAttribute("data-bg2")
+    : index == activeLeaf.value
+    ? target.getAttribute("data-bg2")
+    : target.getAttribute("data-bg")
+
+  target.style.backgroundImage = `url(${bgUrl})`
+}
 </script>
