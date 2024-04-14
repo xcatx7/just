@@ -1,212 +1,197 @@
 <template>
   <article class="s8">
-    <div class="img" data-aos="fade-up" data-aos-delay="0"><img src="./s4/img.png" /></div>
-  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">通勤族酷愛</h3>
-  </div>
-    <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">一捷╳雙快速道，風馳電掣，翻轉未來</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">打通淡水任督二脈的二大交通建設<br />
-淡江大橋╳淡水北側快速道<br />
-其中預計2025年完工的淡江大橋，不僅是全世界最大的跨距斜張橋<br />
-更是媲美雪梨港灣大橋的景觀地標<br />
-橫跨淡水與八里，快速串連台61、64線直達國際機場<br />
-萬企君品，不需繞道關渡大橋<br />
-直上淡江大橋僅需5分鐘<br />
-有效分流車潮，不必跟塞車比耐心<br />
-發動你的引擎，距淡水河北側道路，9分鐘就到<br />
-捷運飛速暢行，不必跟紅燈乾瞪眼<br />
-沿途盡是繁華與時尚，通勤族最愛</p>
-      </div>
+    <img src="./s1/flower1.png" class="flower1" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <img src="./s1/flower2.png" class="flower2" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <div class="t">
+      <div class="t1 " >精品風格 上質美學</div>
     </div>
-    <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="img in imgs" v-lazy:background-image="img.img">
-      <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
-
   </article>
 </template>
 
 <style lang="scss">
-@import '@/assets/style/function.scss';
+@import "@/assets/style/function.scss";
 
 .s8 {
-  @apply relative flex items-center justify-center text-[#555] bg-[#F2F2F2];
-  width: 100%;
-  height:auto;
-  padding:0 0 7em 0;
-  font-size:size(18);
-  gap:3em;
-  flex-wrap: wrap;
-  .img{position: absolute;bottom:0;left:size(-270);width:size(660);
-  img{width: 100%;position: relative;}}
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
-}
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
+  @apply relative w-full;
+  height: size(1080);
+  font-size: size(15);
+  z-index: 3;
+  background: #0003;
+  
+.flower1{
+    @apply absolute;top:size(-285);right:size(695);width: size(518);z-index: 21;}
+    
+.flower2{
+    @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;}
+
+  .t {
+    @apply absolute z-20 text-white;
+    top: size(220);
+    width: size(900);
+    left:0;
+    right: 0;
+    margin: 0 auto;
+    .t1 {
+      @apply text-center  font-['Noto_Serif_TC'];
+      font-size: size(44);
+      font-weight: 700;
+      margin-bottom: .1em;
+    }
+    .t2 {
+      @apply text-center  font-['Noto_Serif_TC'];
+      font-size: size(28);
+      font-weight: 300;
+      margin-bottom: size(23);
+    }
+    .t3 {
+      @apply text-left text-[#FFF];
+      font-size: size(12);
+      font-weight: 300;
+      span{font-size: 1.3em; margin: 0 .5em 0 0;}
     }
   }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
+  .b{
+    display: flex;
+    justify-content:space-between;
+    img{
+      width: size(226);
+    }
   }
 
-  .slider {
-    margin: 0;
-    flex-basis: size(840);
-      height: size(560);
-    .slide-item {
-      @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
-      
-    }
-    .splide__pagination{
-      right: calc(100% + 3em);
-      justify-content: flex-end;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
-    }
-    }
+  .view {
+    @apply w-full absolute bottom-0 left-0 right-0 z-20;
+    width: size(1790);
+    height: size(1415);margin: auto;
+    border-radius: size(116);overflow: hidden;
   }
 }
+
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
-
-@media screen and (max-width: 767px) {
-
-  .s8 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
-  font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:2em;
-  .img{position: absolute;top:sizem(350);left: auto;
-    right:sizem(-155);width:sizem(260);bottom: auto;}
-
-  .main {
-    padding: 0 sizem(32.5);
-    width: 100%;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
-  .txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
-  .slider {
-    height: auto;
-    width: 100%;
+@media screen and (max-width: 767px) {
+  .s8 {
+    height: sizem(1920);
+    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+  
+   // background: #1b527a;
+    &::after {
+      @apply absolute w-full h-full z-10;
+      content: "";
+    //  background-image: url("@/section/s8/bgm.jpg");
+      background-position: top;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
 
-    .caption {
-    font-size:sizem(12);  
-    right:sizem(5);
-    bottom:sizem(5);
+    .splide {
+      @apply absolute w-full z-20;
+      height: sizem(190);
+      top: sizem(500);
+      .splide__slide {
+        @apply relative cursor-pointer;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: sizem(190);
+        width: sizem(190);
+        &:nth-child(1) {
+          bottom: size(40);
+        }
+        &:nth-child(2) {
+          bottom: size(10);
+        }
+        &:nth-child(3) {
+          bottom: size(100);
+        }
+        &:nth-child(4) {
+          bottom: size(40);
+        }
+        &:nth-child(6) {
+          bottom: size(30);
+        }
+      }
     }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
+    .leaf-img {
+      @apply absolute z-20;
+      width: sizem(330);
+      top: sizem(700);
+      left: sizem(22.5);
     }
-  }
+    .leaf-arrow {
+      @apply absolute z-20;
+      top: sizem(950);
+      right: sizem(22.5);
+    }
+    .gor,.gol{
+      @apply absolute z-20;
+      top: sizem(500);
+      right: 0;
+      width:  sizem(100);height:  sizem(750);
+    }
+    .gol{
+      left: 0;height:  sizem(200);
+    }
+
+    .t {
+      @apply absolute z-20 text-white;
+      top: sizem(100);
+      width: sizem(300);
+      left: sizem(37.5);
+      .t1 {
+        font-size: sizem(30);
+        margin-bottom: sizem(20);
+      }
+      .t2 {
+        font-size: sizem(14);
+        font-weight: 400;
+        width: 100%;
+        margin-bottom: sizem(20);
+      }
+      .t3 {
+        font-size: sizem(16);
+        font-weight: 500;
+      }
+    }
+
+    .view {
+      height: sizem(900);
+    }
   }
 }
 </style>
+
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
+import fullview from "@/components/fullview.vue"
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
 
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
+const smoothScroll = inject("smoothScroll")
+const isMobile = computed(() => globals.$isMobile())
+
+const activeLeaf = ref(1)
+
+const splide = ref()
+
+const move = (idx1, idx2, dest) => {
+  activeLeaf.value = idx2 + 1
 }
 
-const splide = ref();
+const replaceBg = (isHover, event, index) => {
+  const target = event.target
+  const bgUrl = isHover
+    ? target.getAttribute("data-bg2")
+    : index == activeLeaf.value
+    ? target.getAttribute("data-bg2")
+    : target.getAttribute("data-bg")
 
-const currentSlideIndex = ref(0);
-
-const moved = (newIdx, prevIdx, destIdx) => {
-  currentSlideIndex.value = prevIdx
+  target.style.backgroundImage = `url(${bgUrl})`
 }
-
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
-const imgs = [
-  {
-    img:new URL("./s8/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s8/1_m.webp", import.meta.url).href : new URL("./s8/1.webp", import.meta.url).href,
-    caption: "淡水捷運站 實景拍攝"
-  },
-  {
-    img:new URL("./s8/2.jpg", import.meta.url).href ,
-    caption: "捷運 實景拍攝"
-  },
-  {
-    img:new URL("./s8/3.jpg", import.meta.url).href ,
-    caption: "淡水捷運站 實景拍攝"
-  },
-]
 </script>
-

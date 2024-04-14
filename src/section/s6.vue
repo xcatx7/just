@@ -1,296 +1,206 @@
 <template>
-  <article class="s6">
-    <div class="slide-box">
-      <div class="thum" v-if="isMobile">
-        <div
-          class="thum-item"
-          :class="{ active: i == currentIndex }"
-          v-for="(thum, i) in imgs"
-          :key="i"
-          @click="splide.go(i)"
-          v-html="thum.title"
-        ></div>
-      </div>
-      <div class="splide-box">
-        <Splide
-          ref="splide"
-          class="slide"
-          :options="{
-            arrows: false,
-            autoplay: true,
-            interval: 4000,
-            gap: 10,
-            type: 'loop',
-            pagination: false,
-            arrowPath: `M17.4591 31.1385C17.9961 31.6755 18.8667 31.6755 19.4037 31.1385C19.9406 30.6015 19.9406 29.7309 19.4037 29.1939L10.3223 20.1126L19.4037 11.0312C19.9406 10.4943 19.9406 9.62368 19.4037 9.0867C18.8667 8.54973 17.9961 8.54973 17.4591 9.0867L7.40551 19.1403C6.86854 19.6773 6.86854 20.5479 7.40551 21.0849L17.4591 31.1385Z`,
-          }"
-          @splide:move="onMoved"
-        >
-          <SplideSlide
-            class="slide-item"
-            :key="i"
-            v-for="(item, i) in imgs"
-            :style="{ 'background-image': `url(${item.img})` }"
-          >
-            <div class="caption">
-              {{ item.caption }}
-            </div>
-          </SplideSlide>
-        </Splide>
-        <div class="arrows">
-          <img
-            src="@/section/arrow.png"
-            class="arrow prev"
-            alt=""
-            srcset=""
-            @click="splide.go('<')"
-          />
-          <img
-            src="@/section/arrow.png"
-            class="arrow next"
-            alt=""
-            srcset=""
-            @click="splide.go('>')"
-          />
-        </div>
-      </div>
-      <div class="t">
-        <div class="t1">標題假字</div>
-        <div class="div"></div>
-        <div class="t2">
-          遊藝境，沐清華，以奢華城市中少有的深刻與靜謐，至簡溫潤中，流露雋永姿態，風格場域不治不嬈，美感雍容清逸，新東方文華風格打造的迎賓大廳及沙龍會所，宴會廳、KTV、健身房、瑜珈教室、才藝教室…讓五感走進空間，奢寵主人，臻饗賓客，讓家的空間無限延伸，讓20-28坪的居家也能盡顯豪門風範。
-        </div>
-        <div class="div"></div>
-        <div class="thum" v-if="!isMobile">
-          <div
-            class="thum-item"
-            :class="{ active: i == currentIndex }"
-            v-for="(thum, i) in imgs"
-            :key="i"
-            @click="splide.go(i)"
-            v-html="thum.title"
-          ></div>
-        </div>
-      </div>
+  <article class="s6" ref="s6">
+    <div class="slider" data-aos="fade">
+      <swiper  class="slide"
+        :slidesPerView="1"
+        :pagination="{ clickable: true }"
+        :navigation="false"
+        :loop="true"
+        :speed="2000"
+        :autoplay="{
+          delay: 4000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide  class="slide-item" v-for="img in imgs">
+          <img :src="img.img" :alt="img.caption">
+      <div class="caption">{{ img.caption }}</div>
+        </swiper-slide>
+      </swiper>
+
+
     </div>
   </article>
 </template>
 
 <style lang="scss">
-@import "@/assets/style/function.scss";
+@import '@/assets/style/function.scss';
 
-.splide-box {
-  .arrows {
-    @apply absolute top-1/2 w-[105%] -left-[2.5%] -translate-y-1/2 flex justify-between;
-    .arrow {
-      @apply cursor-pointer;
-      width: size(53);
-      height: size(53);
-      &.prev {
-        transform: scaleX(-1);
-      }
-    }
-  }
-}
+
 
 .s6 {
-  @apply relative w-full z-0 text-white flex flex-col items-center justify-center;
-  height: size(919);
+  @apply relative flex items-center justify-center text-[#633804];
+  width: 100%;
+  height:auto;
+  padding:1em 0 1em 0;
+  font-size:size(28);
+  gap:1.5em;
+  flex-wrap: wrap;
+    flex-direction:column;
 
-  .slide-box {
-    @apply flex items-center;
-    gap: size(85);
 
-    .splide-box {
-      @apply relative;
-      .slide {
-        @apply relative;
-        width: size(1074);
-        height: size(667);
-        .slide-item {
-          width: size(1074);
-          height: size(667);
-          background: #eee;
-          background-size: cover !important;
-          .caption {
-            @apply absolute;
-            left: size(29);
-            bottom: size(14);
-            color: #fff;
-            font-size: size(14);
-            font-weight: 400;
-          }
-        }
+
+.slider {
+    margin: 0 auto 0 auto;
+    
+   // flex-basis: 100%;
+    width: size(1834);overflow: hidden;
+      height:auto;
+.swiper {height: 100%;overflow: visible;
+
+
+      .swiper-slide {
+          width: 100%;margin: 0;height: 100%;
+  img{width: 100%;
+      height: size(998);
+      border-radius: size(117);}
+      .caption{
+				@apply font-['Noto_Serif_TC'];
+				font-size: size(37);
+        width: 100%;letter-spacing: .06em;
+				font-weight: 600;
+        color: #000;text-align: center;margin: auto;
       }
-    }
-    .t {
-      @apply relative h-full flex flex-col justify-center;
-      width: size(424);
-      .t1 {
-        color: #c9a063;
-        font-size: size(45);
-        font-weight: 700;
-        margin-bottom: size(8);
-        text-align: center;
       }
-      .t2 {
-        color: #c9a063;
-        font-size: size(16);
-        font-weight: 400;
-        text-align: justify;
-      }
-      .thum {
-        @apply flex flex-wrap w-full justify-between absolute;
-        bottom: 0;
-        row-gap: size(30);
-        margin-top: size(70);
-        .thum-item {
-          @apply cursor-pointer text-black;
-          span {
-            font-size: size(29);
-          }
-          font-size: size(20);
-          border-bottom: size(2) solid #000;
-          &.active {
-            @apply text-[#C9A063];
-            border-bottom: size(2) solid #c9a063;
-          }
-          &:hover {
-            @apply text-[#C9A063];
-            border-bottom: size(2) solid #c9a063;
-          }
-        }
-      }
-    }
   }
-}
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next{
+      position: absolute;
+      top: 0;
+      right: -2em;
+      width:2em;
+      height: sizem(257);
+      display: flex;
+      pointer-events: stroke;
+      cursor: pointer;z-index: 3;
+      
+  justify-content: center;
+  align-items:center;
+    background:url("data:image/svg+xml,%3Csvg stroke='%23633804' stroke-width='5' stroke-linecap='round' width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+    background-size: 50% auto;
+    transition:background-color .5s ;
+    &:hover{
+      //background-color: #0003;
+    }
+    }
+    .swiper-button-prev{transform: scaleX(-1);
+      left: -2em;
+    }
+    .swiper-pagination{
+    bottom: 1em;transform: translateX(-100%);}
+    .swiper-pagination-bullet{
+        width: 1em;
+        height: 1em;
+          background:#B4B4B4;opacity: 1;
 
-.div {
-  @apply w-full;
-  height: 1px;
-  margin: size(20) 0;
-  background: linear-gradient(
-    90deg,
-    rgba(235, 191, 85, 0) 0.5%,
-    #ebbf55 28%,
-    #ebbf55 71.5%,
-    rgba(235, 191, 85, 0) 100%
-  );
+    }
+    .swiper-pagination-bullet-active{background:#22491B;}
+
+    
+/*
+  .slider {
+    margin: 0;
+    flex-basis: 100%;
+    width: 100%;
+      height: size(1009);
+    .slide-item {
+      @apply bg-cover;
+    flex-basis:100%;
+    width: 100%;
+      height: size(1009);
+      
+    }
+  }*/
+
+
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
 
 @media screen and (max-width: 767px) {
-  .splide-box {
-    .arrows {
-      @apply w-[108%] -left-[4%];
-      .arrow {
-        @apply cursor-pointer;
-        width: sizem(30);
-        height: sizem(30);
+
+
+.s6 {
+@apply flex-col;
+  height: auto;
+  padding:3em 0 2em;
+font-size:sizem(14);
+flex-wrap:nowrap;
+margin-bottom:0em;
+gap:0em;
+
+
+.main {
+  padding: 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.txt {margin: 2.3em auto 0em;
+  width: 77%;
+}
+
+
+.slider {
+  width:sizem(900);
+      height: sizem(257);
+      overflow: auto;
+.swiper {
+
+  width:sizem(510);
+      .swiper-slide {width: 100%; margin: 0 sizem(30);
+  img{width: 100%;height: 100%;}
       }
-    }
   }
-
-  .s6 {
-    @apply relative w-full z-0 text-white flex flex-col items-center justify-center;
-    height: sizem(675);
-
-    .slide-box {
-      @apply flex flex-col items-center;
-      gap: sizem(15);
-
-      .splide-box {
-        @apply relative;
-        .slide {
-          @apply relative;
-          width: sizem(340);
-          height: sizem(211.5);
-          .slide-item {
-            width: sizem(340);
-            height: sizem(211.5);
-            background: #eee;
-            .caption {
-              left: sizem(12);
-              bottom: sizem(10);
-              font-size: sizem(12);
-            }
-          }
-        }
-      }
-
-      .t {
-        @apply relative h-full flex flex-col justify-center;
-        width: sizem(320);
-        .t1 {
-          color: #c9a063;
-          font-size: sizem(25);
-          margin-bottom: -#{sizem(10)};
-        }
-        .t2 {
-          font-size: sizem(14);
-          line-height: 170%;
-        }
-      }
-    }
-
-    .thum {
-      @apply flex flex-wrap w-full justify-between;
-      bottom: 0;
-      row-gap: 0;
-      margin-top: 0;
-      .thum-item {
-        @apply cursor-pointer text-black;
-        span {
-          font-size: sizem(25);
-        }
-        font-size: sizem(17);
-        border-bottom: sizem(3.5) solid #000;
-        &.active {
-          @apply text-[#C9A063];
-          border-bottom: sizem(3.5) solid #c9a063;
-        }
-        &:hover {
-          @apply text-[#C9A063];
-          border-bottom: sizem(3.5) solid #c9a063;
-        }
-      }
-    }
-  }
+}
+}
 }
 </style>
-
 <script setup>
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
-const globals = getCurrentInstance().appContext.config.globalProperties
+import { computed, getCurrentInstance, ref } from 'vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import { Pagination, Navigation, Autoplay } from "swiper";
+const modules = ref([Pagination, Navigation, Autoplay]);
 
-const smoothScroll = inject("smoothScroll")
-const isMobile = computed(() => globals.$isMobile())
+const globals = getCurrentInstance().appContext.config.globalProperties;
 
-const currentIndex = ref(0)
-
-const onMoved = (newIdx, prevIdx, destIdx) => {
-  currentIndex.value = prevIdx
+const isMobile = computed(() => globals.$isMobile());
+const getImg = (path) => {
+  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
+  return new URL(`./${path}_m.jpg`, import.meta.url).href
 }
-const splide = ref()
+
+const splide = ref();
+
+const currentSlideIndex = ref(0);
+
+const moved = (newIdx, prevIdx, destIdx) => {
+  currentSlideIndex.value = prevIdx
+}
 
 const imgs = [
   {
-    img: new URL("../section/s5/1.jpg", import.meta.url).href,
-    caption: "XXXXXXXXXX",
-    title: "<span>23</span>坪/二房",
+    img:new URL("./s6/1.jpg", import.meta.url).href ,
+    caption: "和風迎賓大廳"
   },
   {
-    img: new URL("../section/s5/2.jpg", import.meta.url).href,
-    caption: "XXXXXXXXXX",
-    title: "<span>33</span>坪/三房",
+    img:new URL("./s6/2.jpg", import.meta.url).href ,
+    caption: "敘咖啡交誼廳"
   },
   {
-    img: new URL("../section/s5/3.jpg", import.meta.url).href,
-    caption: "XXXXXXXXXX",
-    title: "<span>33</span>坪/三房",
+    img:new URL("./s6/3.jpg", import.meta.url).href ,
+    caption: "青鳥宅配專區"
+  },
+  {
+    img:new URL("./s6/4.jpg", import.meta.url).href ,
+    caption: "聚會議閱讀區"
   },
 ]
 </script>
+

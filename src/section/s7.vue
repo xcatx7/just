@@ -1,123 +1,120 @@
-
-
 <template>
-  <article class="s7">
-    <div class="love1"><img src="./s1/love.png" alt=""></div>
-  <div class="txt">
-    <h3 class="title" data-aos="fade-up" data-aos-delay="0">森活族最愛</h3>
-  </div>
-    <div class="main">
-      <div class="txt">
-    <h4 class="subtitle" data-aos="fade-up" data-aos-delay="200">都心綠肺，青潤濃抹，<br />公園第一排，景觀頭等艙</h4>
-        <p class="desc" data-aos="fade-up" data-aos-delay="400">碧波盈盈，無疆視野，喧囂自外<br />
-窗映時序，風光巨幕，森籟共鳴<br />
-坐落市心難得2800坪公園預定地樹海首排<br />
-不僅吸附落塵，降低PM2.5的危害<br />
-運動/散步/溜溜孩子與毛小孩，健康樂活你的植感生活</p>
-      </div>
-    </div>
+  <article class="s7" ref="s7">
     <div class="slider" data-aos="fade">
-      <div class="arrows">
-        <div class="prev" @click="splide.splide.go('<')"></div>
-        <div class="next" @click="splide.splide.go('>')"></div>
-      </div>
-      <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-        <SplideSlide class="slide-item" v-for="(img, index) in imgs" :key="index" v-lazy:background-image="img.img">
-          <span class="caption">{{ img.caption }}</span>
-        </SplideSlide>
-      </Splide>
-    </div>
+      <swiper  class="slide"
+        :slidesPerView="'auto'"
+        :pagination="{ clickable: true }"
+        :navigation="false"
+        :loop="true"
+        :speed="2000"
+        :autoplay="{
+          delay: 4000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide  class="slide-item" v-for="img in imgs">
+          <img :src="img.img" :alt="img.caption">
+      <span class="caption">{{ img.caption }}</span>
+        </swiper-slide>
+      </swiper>
 
+
+    </div>
   </article>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
+
+
 .s7 {
-  @apply relative overflow-hidden flex items-center justify-center text-[#555] bg-[#F2F2F2];
+  @apply relative flex items-center justify-center text-[#633804];
   width: 100%;
   height:auto;
-  padding:0 0 7em 0;
-  font-size:size(18);
-  gap:3em;
-  flex-direction: row-reverse;
+  padding:0em 0 5em 0;
+  font-size:size(28);
+  gap:1.5em;
   flex-wrap: wrap;
-    .love1{
-    z-index: 1;
-    position: absolute;  
-    width: size(180);
-    right: size(160);
-    bottom: size(110); 
-    animation: an 3s ease-in-out infinite alternate-reverse;
-     transform:translate(10%, 20%);
-     img{transform: scaleX(-1)rotate(-7deg);width:100%;}
-    }
-
-  .main {
-    @apply flex;
-    margin: 0;
-    flex-basis: size(590);
-  flex-direction: column;
-  text-align: justify;
+    flex-direction:column;
+    .t{
+    width: size(1440);}
+.box{
+  display: flex;
+  gap:1.5em;
 }
-  .txt {
-    position: relative;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1.7;
-    width: 100%;
-  .title{
-    font-size: 2.2em;
-    margin: 2em 0 0em;
-    line-height: 1.4;
-    font-weight: 700;
-    color:#B78E63;
-    text-align: center;
-    &::after,
-    &::before{
-      content: "";
-      width: 15.7em;
-      height: 1px;
-      background: currentColor;
-      display: inline-block;
-      vertical-align: middle;
-      margin: auto .5em;
-    }
-  }
-  .subtitle{
-    font-size: 1.65em;
-    font-weight: 700;
-    margin: 0 0 .8em;
-    color:#B78E63;
-    line-height: 1.5;
-  }
-  .desc{
-    margin: 0 0 1em;
-    b{
-    color:#B78E63;}
-  }
-  }
+    .en{
+    width: size(415);}
 
+
+
+.slider {
+    margin: 0 0 0 auto;
+    
+   // flex-basis: 100%;
+    width: 100%;
+      height: size(335);
+.swiper {height: 100%;overflow: hidden;
+
+
+      .swiper-slide {
+          width: size(510);margin: 0 size(5);height: 100%;
+  img{width: 100%;height: 100%;}
+      }
+  }
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next{
+      position: absolute;
+      top: 0;
+      right: -2em;
+      width:2em;
+      height: sizem(257);
+      display: flex;
+      pointer-events: stroke;
+      cursor: pointer;z-index: 3;
+      
+  justify-content: center;
+  align-items:center;
+    background:url("data:image/svg+xml,%3Csvg stroke='%23633804' stroke-width='5' stroke-linecap='round' width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+    background-size: 50% auto;
+    transition:background-color .5s ;
+    &:hover{
+      //background-color: #0003;
+    }
+    }
+    .swiper-button-prev{transform: scaleX(-1);
+      left: -2em;
+    }
+    .swiper-pagination{
+    bottom: 1em;transform: translateX(-100%);}
+    .swiper-pagination-bullet{
+        width: 1em;
+        height: 1em;
+          background:#B4B4B4;opacity: 1;
+
+    }
+    .swiper-pagination-bullet-active{background:#22491B;}
+
+    
+/*
   .slider {
     margin: 0;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis: 100%;
+    width: 100%;
+      height: size(1009);
     .slide-item {
       @apply bg-cover;
-    flex-basis: size(840);
-      height: size(560);
+    flex-basis:100%;
+    width: 100%;
+      height: size(1009);
       
     }
-    .splide__pagination{
-      left: calc(100% + 3em);
-      justify-content: flex-start;
-    color: #C5C5C5; 
-    li button.is-active{
-      color: #B78E63;
-    }
-    }
-  }
+  }*/
+
+
 }
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
@@ -125,64 +122,54 @@
 
 @media screen and (max-width: 767px) {
 
-  .s7 {
-  @apply flex-col;
-    height: auto;
-    padding: 0;
-  font-size:sizem(12);
-  flex-wrap:nowrap;
-  margin-bottom:0em;
-  gap:2em;
-    .love1{
-    width: sizem(60);
-    right: sizem(40);
-    bottom:auto; 
-    top:sizem(100);
-    }
+
+.s7 {
+@apply flex-col;
+  height: auto;
+  padding:3em 0 2em;
+font-size:sizem(14);
+flex-wrap:nowrap;
+margin-bottom:0em;
+gap:0em;
 
 
-  .main {
-    padding: 0 sizem(30);
-    width: 100%;
+.main {
+  padding: 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.txt {margin: 2.3em auto 0em;
+  width: 77%;
 }
 
 
-.txt {
-  .title{
-    font-size: 1.8em;
-    &::after,
-    &::before{
-      width: 4.2em;}
-  }
-  .subtitle{
-    font-size: 1.4em;
-  }
-  }
+.slider {
+  width:sizem(900);
+      height: sizem(257);
+      overflow: auto;
+.swiper {
 
-  .slider {
-    height: auto;
-    width: 100%;
-
-    .caption {
-    font-size:sizem(12); 
-    right:sizem(5);
-    bottom:sizem(5); 
-    }
-    .slide-item {
-      @apply bg-cover;
-      width: 100%;
-    flex-basis: auto;
-      height: sizem(250);
-      
-    }
+  width:sizem(510);
+      .swiper-slide {width: 100%; margin: 0 sizem(30);
+  img{width: 100%;height: 100%;}
+      }
   }
-  }
+}
+}
 }
 </style>
 <script setup>
 import { computed, getCurrentInstance, ref } from 'vue';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import { Pagination, Navigation, Autoplay } from "swiper";
+const modules = ref([Pagination, Navigation, Autoplay]);
+
 const globals = getCurrentInstance().appContext.config.globalProperties;
 
+const isMobile = computed(() => globals.$isMobile());
 const getImg = (path) => {
   if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
   return new URL(`./${path}_m.jpg`, import.meta.url).href
@@ -196,25 +183,42 @@ const moved = (newIdx, prevIdx, destIdx) => {
   currentSlideIndex.value = prevIdx
 }
 
-const options = {
-  rewind: false,
-  arrows: false,
-  pagination: true,
-  autoplay: true,
-  interval: 4000,
-  gap: 0,
-  type: 'loop'
-}
-
 const imgs = [
   {
-    img:new URL("./s7/1.jpg", import.meta.url).href ,
-    //img: globals.$isMobile() ? new URL("./s7/1_m.webp", import.meta.url).href : new URL("./s7/1.webp", import.meta.url).href,
-    caption: "老街河岸綠地 實景拍攝",
- },
+    img:new URL("./s4/1.jpg", import.meta.url).href ,
+    caption: ""
+  },
   {
-    img:new URL("./s7/2.jpg", import.meta.url).href ,
-    caption: "老街河岸綠地 實景拍攝",
+    img:new URL("./s4/2.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/3.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/4.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/5.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/6.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/7.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/8.jpg", import.meta.url).href ,
+    caption: ""
+  },
+  {
+    img:new URL("./s4/9.jpg", import.meta.url).href ,
+    caption: ""
   },
 ]
 </script>
