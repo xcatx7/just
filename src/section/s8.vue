@@ -1,13 +1,6 @@
 <template>
   <article class="s8">
-    <img src="./s1/flower1.png" class="flower1" alt=""
-      data-aos="zoom-in"
-      data-aos-delay="500"
-      data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower2" alt=""
-      data-aos="zoom-in"
-      data-aos-delay="500"
-      data-aos-duration="1600" />
+    <img src="./s8/bg.jpg" alt="" class="bg">
     <div class="t">
       <div class="t1 " >精品風格 上質美學</div>
     </div>
@@ -22,14 +15,14 @@
   height: size(1080);
   font-size: size(15);
   z-index: 3;
-  background: #0003;
-  
-.flower1{
-    @apply absolute;top:size(-285);right:size(695);width: size(518);z-index: 21;}
-    
-.flower2{
-    @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;}
+  //background: #0003;
+  .bg{
+    @apply absolute;
+    top: 0;left: 0;width: 100%;
 
+  }
+
+  
   .t {
     @apply absolute z-20 text-white;
     top: size(220);

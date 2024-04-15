@@ -30,7 +30,7 @@
 
 
 .s6 {
-  @apply relative flex items-center justify-center text-[#633804];
+  @apply relative flex items-center justify-center text-[#633804] bg-[#fff];
   width: 100%;
   height:auto;
   padding:1em 0 1em 0;

@@ -4,7 +4,7 @@
       <swiper  class="slide"
         :slidesPerView="'auto'"
         :pagination="{ clickable: true }"
-        :navigation="false"
+        :navigation="true"
         :loop="true"
         :speed="2000"
         :autoplay="{
@@ -30,7 +30,7 @@
 
 
 .s7 {
-  @apply relative flex items-center justify-center text-[#633804];
+  @apply relative flex items-center justify-center text-[#633804] bg-[#fff];
   width: 100%;
   height:auto;
   padding:0em 0 5em 0;
@@ -50,17 +50,28 @@
 
 
 .slider {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 size(60);
     
    // flex-basis: 100%;
-    width: 100%;
-      height: size(335);
-.swiper {height: 100%;overflow: hidden;
+    width: calc(100% - #{size(60)});overflow: hidden;
+      height:auto;padding:0 0 3em;
+      &::after{
+        content: "";position: absolute;top: 0;left: 0;width:size(200);
+      height: size(400);background: linear-gradient(to right, #FFF 0%,#fff0 100%);z-index: 2;
+      }
+.swiper {height: 100%;overflow: hidden;overflow: visible;
 
 
       .swiper-slide {
           width: size(510);margin: 0 size(5);height: 100%;
   img{width: 100%;height: 100%;}
+      .caption{
+				@apply font-['Noto_Serif_TC'];
+				font-size: size(22);display: block;
+        width: 100%;letter-spacing: .06em;
+				font-weight: 600;
+        color: #367E7C;text-align: right;margin:.3em auto 0;
+      }
       }
   }
   }
@@ -68,13 +79,13 @@
   .swiper-button-prev,
   .swiper-button-next{
       position: absolute;
-      top: 0;
-      right: -2em;
+      bottom: 0;
+      right: 2em;
       width:2em;
-      height: sizem(257);
+      height: 2em;
       display: flex;
       pointer-events: stroke;
-      cursor: pointer;z-index: 3;
+      cursor: pointer;z-index: 6;
       
   justify-content: center;
   align-items:center;
@@ -86,13 +97,13 @@
     }
     }
     .swiper-button-prev{transform: scaleX(-1);
-      left: -2em;
+      left: 2em;
     }
     .swiper-pagination{
-    bottom: 1em;transform: translateX(-100%);}
+    bottom: -2.6em;}
     .swiper-pagination-bullet{
-        width: 1em;
-        height: 1em;
+        width: .3em;
+        height: .3em;
           background:#B4B4B4;opacity: 1;
 
     }
@@ -185,41 +196,25 @@ const moved = (newIdx, prevIdx, destIdx) => {
 
 const imgs = [
   {
-    img:new URL("./s4/1.jpg", import.meta.url).href ,
-    caption: ""
+    img:new URL("./s7/1.jpg", import.meta.url).href ,
+    caption: "四季森悅廊道"
   },
   {
-    img:new URL("./s4/2.jpg", import.meta.url).href ,
-    caption: ""
+    img:new URL("./s7/2.jpg", import.meta.url).href ,
+    caption: "圓滿活動廣場"
   },
   {
-    img:new URL("./s4/3.jpg", import.meta.url).href ,
-    caption: ""
+    img:new URL("./s7/3.jpg", import.meta.url).href ,
+    caption: "逸樂散步小徑  "
   },
   {
-    img:new URL("./s4/4.jpg", import.meta.url).href ,
-    caption: ""
+    img:new URL("./s7/4.jpg", import.meta.url).href ,
+    caption: "頑童遊戲沙坑"
   },
   {
-    img:new URL("./s4/5.jpg", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s4/6.jpg", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s4/7.jpg", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s4/8.jpg", import.meta.url).href ,
-    caption: ""
-  },
-  {
-    img:new URL("./s4/9.jpg", import.meta.url).href ,
-    caption: ""
-  },
+    img:new URL("./s7/5.jpg", import.meta.url).href ,
+    caption: "光合體適能區"
+  },     
 ]
 </script>
 
