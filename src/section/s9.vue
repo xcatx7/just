@@ -15,11 +15,11 @@
 
     
   <!-- Modal -->
-  <input type="checkbox" v-model="s9open" id="contact-modal" class="modal-toggle" />
+  <input type="checkbox" v-model="s9open" id="s9-modal" class="modal-toggle" />
   <div class="modal boxbg">
-      <label for="contact-modal" class="mbg"></label>
+      <label for="s9-modal" class="mbg"></label>
     <div class="s9-box ">
-      <label for="contact-modal" class="btn absolute">✕</label>
+      <label for="s9-modal" class="btn absolute">✕</label>
       <div v-if="s9type == 'type1'">
     <img src="./s9/t1.png" class="left" alt="" >
     <img src="./s9/1.jpg" class="right" alt="" >

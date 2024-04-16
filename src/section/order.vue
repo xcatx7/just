@@ -129,7 +129,6 @@
       </div>
 
       <!-- Contact Info -->
-      <ContactInfo />
     </div>
 
     <!-- Map -->
@@ -414,7 +413,6 @@
 
 <script setup>
 import Policy from "@/section/form/policy.vue"
-import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 

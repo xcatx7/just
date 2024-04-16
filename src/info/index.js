@@ -1,4 +1,4 @@
-const caseName = "文華苑"
+const caseName = "合登成泰美"
 
 export default {
   meta: {
@@ -12,9 +12,10 @@ export default {
   googleSrc:
     "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3614.3968571642185!2d121.45341507611329!3d25.05453483746298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDAzJzE2LjMiTiAxMjHCsDI3JzIxLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1701853096132!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/izBcPxPhYjCMDFjV9",
-  phone: "02-2279-1188",
+  phone: "02-000",
   fbLink: "https://www.facebook.com/61554320400557",
   fbMessage: "https://m.me/61554320400557",
+  line: "https://lin.ee/jX9Xyhz",
   caseName: caseName,
   houseInfos: [
     ["建築規劃", "中德建設股份有限公司"],

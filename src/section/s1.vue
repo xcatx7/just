@@ -101,7 +101,7 @@
 
   @keyframes an1 {
     to {
-      transform: scale(1);
+      transform: scale(1) ;
     }
   }
 
