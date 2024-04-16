@@ -1,12 +1,6 @@
 <template>
   <div id="order" class="order relative text-center">
     <div class="order-section">
-      <img
-        class="order-title-img relative z-10"
-        src="@/section/form/logo.png"
-        alt=""
-        srcset=""
-      />
       <!-- Title -->
       <div class="order-title text-center relative z-10">
         {{ info.order.title }}
@@ -166,33 +160,16 @@
   &:before {
     content: "";
     width: 100%;
-    height: 50%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: url('@/section/form/bg.png');
-    background-color: #0f2351;
+    background-color: #666;
     background-size: 100%;
     background-repeat: no-repeat;
   }
 
-  &:after {
-    content: "";
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    background: linear-gradient(
-      0deg,
-      #074544 0%,
-      #083f46 33%,
-      #0c2f4c 76%,
-      #0f2351 100%
-    );
-  }
 }
 
 .order {

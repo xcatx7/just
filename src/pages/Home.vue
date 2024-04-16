@@ -8,10 +8,10 @@
     }"
     class="transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]"
   >
-    <img class="w-32" src="@/assets/loading_w.gif" alt="文華苑" srcset="" />
+    <img class="w-32" src="@/section/form/loading.svg" alt="loading" srcset="" />
   </div>
   <!--loading end-->
-  <Nav v-if="config.showNav" />
+   <Nav />
   <div
     class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0"
   >
@@ -23,8 +23,10 @@
     <S5 />
     <S6 />
     <S7 />
+    <div class="bg89">
     <S8 />
-    <S9 />
+    <S9 /></div>
+    <S10 />
     <Order />
   </div>
 </template>
@@ -38,9 +40,12 @@ img {
 }
 
 .home {
-  background: #efefef url("@/section/s1/bg.jpg");
+  background: #efefef url("@/section/s1/bg.jpg") fixed;
 }
-.bgs1s2{
+.bg89{
+  position: relative;
+  background: #efefef url("@/section/s8/bg.jpg") center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -61,6 +66,7 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

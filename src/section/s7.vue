@@ -3,6 +3,7 @@
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
         :slidesPerView="'auto'"
+        :spaceBetween="10"
         :pagination="{ clickable: true }"
         :navigation="true"
         :loop="true"
@@ -33,7 +34,7 @@
   @apply relative flex items-center justify-center text-[#633804] bg-[#fff];
   width: 100%;
   height:auto;
-  padding:0em 0 5em 0;
+  padding:0em 0 2em 0;
   font-size:size(28);
   gap:1.5em;
   flex-wrap: wrap;
@@ -59,7 +60,7 @@
         content: "";position: absolute;top: 0;left: 0;width:size(200);
       height: size(400);background: linear-gradient(to right, #FFF 0%,#fff0 100%);z-index: 2;
       }
-.swiper {height: 100%;overflow: hidden;overflow: visible;
+.swiper {height: 100%;overflow: visible;
 
 
       .swiper-slide {
@@ -79,17 +80,17 @@
   .swiper-button-prev,
   .swiper-button-next{
       position: absolute;
-      bottom: 0;
-      right: 2em;
-      width:2em;
-      height: 2em;
+    bottom: -3em;
+      right: calc(50% - 3.4em);
+      width:1.8em;
+      height: 1.8em;
       display: flex;
       pointer-events: stroke;
-      cursor: pointer;z-index: 6;
+      cursor: pointer;z-index: 15;
       
   justify-content: center;
   align-items:center;
-    background:url("data:image/svg+xml,%3Csvg stroke='%23633804' stroke-width='5' stroke-linecap='round' width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23367E7C' d='M12.5,25C19.4,25,25,19.4,25,12.5C25,5.6,19.4,0,12.5,0C5.6,0,0,5.6,0,12.5C0,19.4,5.6,25,12.5,25z'/%3E%3Cpath stroke='%23FFF' d='M8.5,20.4l10-8l-10-8'/%3E%3C/svg%3E") no-repeat center;
     background-size: 50% auto;
     transition:background-color .5s ;
     &:hover{
@@ -97,17 +98,18 @@
     }
     }
     .swiper-button-prev{transform: scaleX(-1);
-      left: 2em;
+      left: calc(50% - 3.4em);
     }
     .swiper-pagination{
     bottom: -2.6em;}
     .swiper-pagination-bullet{
         width: .3em;
         height: .3em;
-          background:#B4B4B4;opacity: 1;
+          background:#367d7b66;opacity: 1;
+
 
     }
-    .swiper-pagination-bullet-active{background:#22491B;}
+    .swiper-pagination-bullet-active{background:#367E7C;}
 
     
 /*
@@ -156,14 +158,19 @@ gap:0em;
 
 
 .slider {
-  width:sizem(900);
-      height: sizem(257);
-      overflow: auto;
+  width:100%;
+      height:auto;
+      &::after{
+      height: sizem(300);
+      }
 .swiper {
 
-  width:sizem(510);
-      .swiper-slide {width: 100%; margin: 0 sizem(30);
-  img{width: 100%;height: 100%;}
+  width:100%;
+      .swiper-slide {
+  width:sizem(160);
+      .caption{
+				font-size: sizem(12);
+      }
       }
   }
 }

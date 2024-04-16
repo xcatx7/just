@@ -3,6 +3,7 @@
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
         :slidesPerView="1"
+        :spaceBetween="10"
         :pagination="{ clickable: true }"
         :navigation="false"
         :loop="true"
@@ -30,10 +31,10 @@
 
 
 .s5 {
-  @apply relative flex items-center justify-center text-[#633804];
+  @apply relative flex items-center justify-center text-[#633804] bg-[#fff];
   width: 100%;
   height:auto;
-  padding:1em 0 1em 0;
+  padding:0;
   font-size:size(28);
   gap:1.5em;
   flex-wrap: wrap;
@@ -118,7 +119,7 @@
 .s5 {
 @apply flex-col;
   height: auto;
-  padding:3em 0 2em;
+  padding:0;
 font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
@@ -137,15 +138,12 @@ gap:0em;
 
 
 .slider {
-  width:sizem(900);
-      height: sizem(257);
+  width:100%;
+      height: sizem(200);
       overflow: auto;
 .swiper {
 
-  width:sizem(510);
-      .swiper-slide {width: 100%; margin: 0 sizem(30);
-  img{width: 100%;height: 100%;}
-      }
+  width:100%;
   }
 }
 }

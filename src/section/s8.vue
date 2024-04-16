@@ -1,8 +1,10 @@
 <template>
   <article class="s8">
-    <img src="./s8/bg.jpg" alt="" class="bg">
     <div class="t">
-      <div class="t1 " >精品風格 上質美學</div>
+      <div class="t1">精品風格 上質美學</div>
+    <img src="./s8/logosm.png" alt="" class="logos" v-if="isMobile">
+    <img src="./s8/logos.png" alt="" class="logos" v-else>
+    <img src="./s8/en.svg" alt="" class="en">
     </div>
   </article>
 </template>
@@ -12,7 +14,7 @@
 
 .s8 {
   @apply relative w-full;
-  height: size(1080);
+  height: size(990);
   font-size: size(15);
   z-index: 3;
   //background: #0003;
@@ -25,8 +27,8 @@
   
   .t {
     @apply absolute z-20 text-white;
-    top: size(220);
-    width: size(900);
+    top: size(155);
+    width: size(1597);
     left:0;
     right: 0;
     margin: 0 auto;
@@ -34,19 +36,16 @@
       @apply text-center  font-['Noto_Serif_TC'];
       font-size: size(44);
       font-weight: 700;
-      margin-bottom: .1em;
+      margin-bottom: 1.2em;
     }
-    .t2 {
-      @apply text-center  font-['Noto_Serif_TC'];
-      font-size: size(28);
-      font-weight: 300;
-      margin-bottom: size(23);
+    .logos {
+    width: size(1590);
+    margin: 0 auto 3.6em;display: block;
     }
-    .t3 {
-      @apply text-left text-[#FFF];
-      font-size: size(12);
-      font-weight: 300;
-      span{font-size: 1.3em; margin: 0 .5em 0 0;}
+    .en {
+    width: size(385);
+    margin: 0 auto;display: block;
+
     }
   }
   .b{
@@ -72,86 +71,30 @@
 
 @media screen and (max-width: 767px) {
   .s8 {
-    height: sizem(1920);
-    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+    height: sizem(470);
   
-   // background: #1b527a;
-    &::after {
-      @apply absolute w-full h-full z-10;
-      content: "";
-    //  background-image: url("@/section/s8/bgm.jpg");
-      background-position: top;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
+    .bg{
+    @apply absolute;
+    top: 0;left: -50%;width: 260%;
 
-    .splide {
-      @apply absolute w-full z-20;
-      height: sizem(190);
-      top: sizem(500);
-      .splide__slide {
-        @apply relative cursor-pointer;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: sizem(190);
-        width: sizem(190);
-        &:nth-child(1) {
-          bottom: size(40);
-        }
-        &:nth-child(2) {
-          bottom: size(10);
-        }
-        &:nth-child(3) {
-          bottom: size(100);
-        }
-        &:nth-child(4) {
-          bottom: size(40);
-        }
-        &:nth-child(6) {
-          bottom: size(30);
-        }
-      }
-    }
-    .leaf-img {
-      @apply absolute z-20;
-      width: sizem(330);
-      top: sizem(700);
-      left: sizem(22.5);
-    }
-    .leaf-arrow {
-      @apply absolute z-20;
-      top: sizem(950);
-      right: sizem(22.5);
-    }
-    .gor,.gol{
-      @apply absolute z-20;
-      top: sizem(500);
-      right: 0;
-      width:  sizem(100);height:  sizem(750);
-    }
-    .gol{
-      left: 0;height:  sizem(200);
-    }
+  }
+
 
     .t {
       @apply absolute z-20 text-white;
-      top: sizem(100);
-      width: sizem(300);
-      left: sizem(37.5);
+      top: sizem(50);
+      width: 100%;
       .t1 {
         font-size: sizem(30);
         margin-bottom: sizem(20);
       }
-      .t2 {
-        font-size: sizem(14);
-        font-weight: 400;
-        width: 100%;
-        margin-bottom: sizem(20);
-      }
-      .t3 {
-        font-size: sizem(16);
-        font-weight: 500;
-      }
+    .logos {
+    width: sizem(350);
+    }
+    .en {
+    width: sizem(100);
+
+    }
     }
 
     .view {

@@ -46,42 +46,34 @@ export default {
     "2200-2500萬",
     "2500萬以上",
   ],
-  navList: [
-    {
-      name: "國家級副都心",
-      target: ".s2",
-      offset: "",
-    },
-    {
-      name: "清溪川首排",
-      target: ".s31",
-      offset: "",
-    },
-    {
-      name: "雙大道樞紐",
-      target: ".s32",
-      offset: "",
-    },
-    {
-      name: "副都心的驚嘆號",
-      target: ".s4",
-      offset: "",
-    },
-    {
-      name: "藝術融入生活",
-      target: ".s5",
-      offset: "",
-    },
-    {
-      name: "國際頂級精工",
-      target: ".s52",
-      offset: "",
-    },
-    {
-      name: "立即預約",
-      target: ".order",
-      offset: "",
-      type: "btn",
-    },
-  ],
+  
+  navList: [{
+    name: "最強增值",
+    target: ".s4",
+    offset: "-60",
+    offsetmo: "0",
+},{
+    name: "水岸人生",
+    target: ".s7",
+    offset: "-60",
+    offsetmo: "0",
+},{
+    name: "房貸瘦身",
+    target: ".s5",
+    offset: "-60",
+    offsetmo: "0",
+},{
+    name: "貴賓專線",
+    target: ".contact-info",
+    offset: "",
+    type: 'btn'
+},
+{
+    name: "立即預約",
+    target: ".order",
+    offset: "",
+    type: 'btn'
+},
+],
+
 }

@@ -67,72 +67,23 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(1920);
-    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
-  
-   // background: #1b527a;
-    &::after {
-      @apply absolute w-full h-full z-10;
-      content: "";
-    //  background-image: url("@/section/s2/bgm.jpg");
-      background-position: top;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
+    height: sizem(650);
+  .en{
+    top:sizem(10);
+    right: sizem(10);
+    width:sizem(200) ;
+  }
+.flower1{
+  top:sizem(-70);left: sizem(-80);width: sizem(190);}
+    
+.flower2{
+  top:sizem(-70);left:sizem(70);width: sizem(110);}
 
-    .splide {
-      @apply absolute w-full z-20;
-      height: sizem(190);
-      top: sizem(500);
-      .splide__slide {
-        @apply relative cursor-pointer;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: sizem(190);
-        width: sizem(190);
-        &:nth-child(1) {
-          bottom: size(40);
-        }
-        &:nth-child(2) {
-          bottom: size(10);
-        }
-        &:nth-child(3) {
-          bottom: size(100);
-        }
-        &:nth-child(4) {
-          bottom: size(40);
-        }
-        &:nth-child(6) {
-          bottom: size(30);
-        }
-      }
-    }
-    .leaf-img {
-      @apply absolute z-20;
-      width: sizem(330);
-      top: sizem(700);
-      left: sizem(22.5);
-    }
-    .leaf-arrow {
-      @apply absolute z-20;
-      top: sizem(950);
-      right: sizem(22.5);
-    }
-    .gor,.gol{
-      @apply absolute z-20;
-      top: sizem(500);
-      right: 0;
-      width:  sizem(100);height:  sizem(750);
-    }
-    .gol{
-      left: 0;height:  sizem(200);
-    }
 
     .t {
       @apply absolute z-20 text-white;
-      top: sizem(100);
-      width: sizem(300);
-      left: sizem(37.5);
+      top: sizem(90);
+      width: sizem(310);
       .t1 {
         font-size: sizem(30);
         margin-bottom: sizem(20);
@@ -150,7 +101,8 @@
     }
 
     .view {
-      height: sizem(900);
+    width: sizem(350);
+      height: sizem(500);
     }
   }
 }

@@ -1,8 +1,18 @@
 <template>
   <article class="s6" ref="s6">
+    <img src="./s1/flower1.png" class="flower1" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+    <img src="./s1/flower2.png" class="flower2" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
         :slidesPerView="1"
+        :spaceBetween="10"
         :pagination="{ clickable: true }"
         :navigation="false"
         :loop="true"
@@ -33,11 +43,17 @@
   @apply relative flex items-center justify-center text-[#633804] bg-[#fff];
   width: 100%;
   height:auto;
-  padding:1em 0 1em 0;
+  padding:3em 0 3em 0;
   font-size:size(28);
   gap:1.5em;
   flex-wrap: wrap;
     flex-direction:column;
+  
+.flower1{
+    @apply absolute;pointer-events: none;top:size(-140);right:size(-300);width: size(900);}
+    
+.flower2{
+    @apply absolute;pointer-events: none;bottom:size(-3);left:size(-420);width: size(800);}
 
 
 
@@ -134,26 +150,21 @@ margin-bottom:0em;
 gap:0em;
 
 
-.main {
-  padding: 0 0;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .txt {margin: 2.3em auto 0em;
   width: 77%;
 }
 
 
 .slider {
-  width:sizem(900);
-      height: sizem(257);
-      overflow: auto;
+  width:sizem(340);
+      height:auto;
 .swiper {
 
-  width:sizem(510);
-      .swiper-slide {width: 100%; margin: 0 sizem(30);
-  img{width: 100%;height: 100%;}
+  width:100%;
+      .swiper-slide {
+      .caption{
+				font-size: sizem(15);
+      }
       }
   }
 }

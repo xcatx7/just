@@ -12,10 +12,11 @@
       <fullview />
     </div>
     <div class="t">
-      <div class="t1 " >五股豐收之境 都心熟成之地</div>
+      <div class="t1 " >五股豐收之境<br v-if="isMobile"> 都心熟成之地</div>
       <div class="t2">市心珍藏 千坪美玉 成泰繁華 大隱森境
       </div>
-      <div class="t3"><span>五股精華市區</span>成泰路商圈機能豐美，水碓社區、德音生活圈，在地隱富聚落，因倚公園而享「小陽明山」美譽，為五股人文與景觀兼具的成熟美地。<br>
+      <div class="t3"><span>五股精華市區</span>成泰路商圈機能豐美，水碓社區、德音生活圈，在地隱富聚落，因倚公園而享「小陽明山」美譽，為五股人文與景觀兼具的成熟美地。
+        <div class="hr"></div>
         <span>新北交通樞紐</span>新北重量級動力軸線，車程約4分鐘上五股交流道；台64、65線縱橫大台北連接雙高，近距新莊副都心繁榮共享，桃園機場、松山機場約20分鐘可達。
       </div>
       <div class="b"><img src="./s2/t1.png"><img src="./s2/t2.png"><img src="./s2/t3.png"></div>
@@ -33,10 +34,10 @@
   z-index: 3;
   
 .flower1{
-    @apply absolute;top:size(-285);right:size(695);width: size(518);z-index: 21;}
+    @apply absolute;top:size(-285);right:size(695);width: size(518);z-index: 21;pointer-events: none;}
     
 .flower2{
-    @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;}
+    @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;pointer-events: none;}
 
   .t {
     @apply absolute z-20 text-white;
@@ -61,7 +62,10 @@
       @apply text-left text-[#FFF];
       font-size: size(12);
       font-weight: 300;
-      span{font-size: 1.3em; margin: 0 .5em 0 0;}
+      margin-bottom: size(50);
+      span{font-size: 1.3em; margin: 0 .5em 0 0;
+      font-weight: 500;}
+      .hr{width: 100%;height: 1px;background: #FFF;margin: .5em auto;}
     }
   }
   .b{
@@ -87,8 +91,8 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(1920);
-    background-image:linear-gradient(0deg, #093948 75%, rgba(15, 35, 81, 0) 100%);
+    height: sizem(1170);
+        font-size: sizem(13);
   
    // background: #1b527a;
     &::after {
@@ -99,63 +103,21 @@
       background-size: 100%;
       background-repeat: no-repeat;
     }
+  
+  .flower1{
+    top:sizem(-80);right:sizem(160);width: sizem(200);}
+      
+  .flower2{
+    top:sizem(15);right:sizem(-70);width: sizem(150);}
 
-    .splide {
-      @apply absolute w-full z-20;
-      height: sizem(190);
-      top: sizem(500);
-      .splide__slide {
-        @apply relative cursor-pointer;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: sizem(190);
-        width: sizem(190);
-        &:nth-child(1) {
-          bottom: size(40);
-        }
-        &:nth-child(2) {
-          bottom: size(10);
-        }
-        &:nth-child(3) {
-          bottom: size(100);
-        }
-        &:nth-child(4) {
-          bottom: size(40);
-        }
-        &:nth-child(6) {
-          bottom: size(30);
-        }
-      }
-    }
-    .leaf-img {
-      @apply absolute z-20;
-      width: sizem(330);
-      top: sizem(700);
-      left: sizem(22.5);
-    }
-    .leaf-arrow {
-      @apply absolute z-20;
-      top: sizem(950);
-      right: sizem(22.5);
-    }
-    .gor,.gol{
-      @apply absolute z-20;
-      top: sizem(500);
-      right: 0;
-      width:  sizem(100);height:  sizem(750);
-    }
-    .gol{
-      left: 0;height:  sizem(200);
-    }
 
     .t {
-      @apply absolute z-20 text-white;
+      @apply absolute z-20 ;
       top: sizem(100);
-      width: sizem(300);
-      left: sizem(37.5);
+      width: sizem(310);
       .t1 {
         font-size: sizem(30);
-        margin-bottom: sizem(20);
+        margin-bottom: sizem(10);
       }
       .t2 {
         font-size: sizem(14);
@@ -164,13 +126,25 @@
         margin-bottom: sizem(20);
       }
       .t3 {
-        font-size: sizem(16);
-        font-weight: 500;
+        font-size: sizem(13);
+        margin: sizem(20);
+      width: auto auto sizem(280) auto;
+      span{display: block;}
+      .hr{margin: 1em auto;}
       }
     }
+  .b{
+flex-wrap: wrap;
+    justify-content:center;gap: 1em;
+    img{
+      width: sizem(140);
+      &:last-child{margin: -1.8em auto 0;}
+    }
+  }
 
-    .view {
-      height: sizem(900);
+    .view {padding:sizem(370) 0 0 0 ;
+    width: sizem(360);
+      height: sizem(1170);background: #0a4370;
     }
   }
 }

@@ -2,9 +2,9 @@
   <article class="s1">
     <!--  
 
+    <img src="./s1/pc.jpg" class="t0" alt="" />  
 
     -->
-    <img src="./s1/pc.jpg" class="t0" alt="" />  
     <img src="./s1/leaf.png" class="leaf" alt="" />
     <img src="./s1/box1.png" class="box1" alt="" />
     <img src="./s1/box2.png" class="box2" alt="" />
@@ -62,14 +62,14 @@
 
   .t0{
     position: absolute;
-    top: 0;left: 0;width: 100%;opacity: .3;pointer-events: none;z-index: 50;
+    top: 3vw;left: 0;width: 100%;opacity: .60;pointer-events: none;z-index: 50;
   }
  // background-image: url("@/section/s1/bg1.jpg");
  // background-position: top center;
  // background-size: 100%;
 .leaf{
     @apply absolute;top: 0;left: size(-15);width: size(690);
-    transform: skewY(-3deg);transform-origin: 0 0;
+    transform: skewY(-3deg);transform-origin: 0 0;pointer-events: none;
   
     animation: an1 3s ease-in-out alternate infinite;}
 .box1{
@@ -77,13 +77,10 @@
 .box2{
     @apply absolute;top:size(300);right:size(580);width: size(23);}
 .flower2{
-    @apply absolute;bottom:size(100);right:size(455);width: size(290);}
+    @apply absolute;bottom:size(100);right:size(455);pointer-events: none;width: size(290);}
 .building{
-    @apply absolute;bottom:size(-55);right:size(-0);
+    @apply absolute;bottom:size(-55);right:size(-0);pointer-events: none;
     width: size(535);}
-  .bg {
-    @apply absolute w-full z-0;
-  }
   .txt{
     @apply absolute z-10;
     display: flex;
@@ -145,38 +142,36 @@
 @media screen and (max-width: 767px) {
   .s1 {
     height: calc(100vh - 63px);
-    min-height: sizem(604);
+    min-height: sizem(750);
     max-height: sizem(750);
     font-size: sizem(14);
-    background-size: 105%;
-    background-image: url("@/section/s1/bgm.jpg");
-    background-position: bottom;
+.leaf{
+    @apply absolute;top: 0;left: sizem(-15);width: sizem(250);
+  
+    animation: an1 3s ease-in-out alternate infinite;}
+.box1{
+    @apply absolute;top:sizem(180);left:sizem(40);width: sizem(13);}
+.box2{
+    @apply absolute;top:sizem(100);right:sizem(20);width: sizem(13);}
+.flower2{
+    @apply absolute;bottom:sizem(50);right:sizem(150);pointer-events: none;width: sizem(100);}
+.building{
+    @apply absolute;bottom:sizem(-55);right:size(-10);pointer-events: none;
+    width: sizem(200);}
 
+    .txt{
+    top: calc(50% + #{sizem(190-(604 * 0.5))});}
     .logo {
-      position: absolute;
-      top: sizem(604);
-      left: auto;
-      right: auto;
-      margin: auto;
-      top: calc(50% + #{sizem(130-(604 * 0.5))});
-      width: sizem(271);
+    width: sizem(250);
     }
+  .t1 {
+    width: sizem(250);
+    margin-bottom: .7em;
+  }
+  .t2 {
+    width: sizem(250);
+  }
 
-    .img1 {
-      top: sizem(-30);
-      left: sizem(-45);
-      width: sizem(250);
-    }
-    .img2 {
-      bottom: sizem(0);
-      right: sizem(0);
-      width: sizem(110);
-    }
-    .img3 {
-      bottom: sizem(-100);
-      right: sizem(-60);
-      width: sizem(240);
-    }
   }
 }
 </style>

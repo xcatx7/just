@@ -3,12 +3,14 @@
     <img src="./s4/tm.png" class="t" v-if="isMobile">
     <img src="./s4/t.png" class="t" v-else>
     <div class="box">
-    <img src="./s4/en.svg" class="en">
+    <img src="./s4/en.svg" class="en" v-if="!isMobile">
+    <img src="./s4/enm.svg" class="en" v-else>
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
-        :slidesPerView="'auto'"
+        :slidesPerView=" isMobile ? '1':'auto' " 
+        :spaceBetween="10"
         :pagination="{ clickable: true }"
-        :navigation="false"
+        :navigation="true"
         :loop="true"
         :speed="2000"
         :autoplay="{
@@ -47,24 +49,24 @@
     width: size(1440);}
 .box{
   display: flex;
-  gap:1.5em;
+  gap:.8em;width: 100%;
+    align-items:flex-start;
 }
     .en{
-    width: size(415);}
+    width: size(415);margin:1.5em auto auto 4.8em;flex: 0;}
 
 
 
 .slider {
-    margin: 0 0 0 auto;
-    
+    margin: 0 0 0 auto;padding:0;
+    overflow: hidden;
    // flex-basis: 100%;
-    width: size(1315);
+    width: size(1330);
       height: size(335);
-.swiper {height: 100%;overflow: hidden;
-
+.swiper {height: 100%;padding:0;
 
       .swiper-slide {
-          width: size(510);margin: 0 size(5);height: 100%;
+          width: size(510);margin: 0;height: 100%;
   img{width: 100%;height: 100%;}
       }
   }
@@ -73,17 +75,16 @@
   .swiper-button-prev,
   .swiper-button-next{
       position: absolute;
-      top: 0;
-      right: -2em;
-      width:2em;
-      height: sizem(257);
+      bottom: 0em;
+      right: 0em;
+      width:1.8em;
+      height: 1.8em;
       display: flex;
       pointer-events: stroke;
-      cursor: pointer;z-index: 3;
-      
+      cursor: pointer;z-index: 15;
   justify-content: center;
   align-items:center;
-    background:url("data:image/svg+xml,%3Csvg stroke='%23633804' stroke-width='5' stroke-linecap='round' width='30' height='51' viewBox='0 0 30 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='3.7,2.8 26.3,25.5 3.7,48.2 '/%3E%3C/svg%3E") no-repeat center;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23367E7C' d='M12.5,25C19.4,25,25,19.4,25,12.5C25,5.6,19.4,0,12.5,0C5.6,0,0,5.6,0,12.5C0,19.4,5.6,25,12.5,25z'/%3E%3Cpath stroke='%23FFF' d='M8.5,20.4l10-8l-10-8'/%3E%3C/svg%3E") no-repeat center;
     background-size: 50% auto;
     transition:background-color .5s ;
     &:hover{
@@ -91,18 +92,18 @@
     }
     }
     .swiper-button-prev{transform: scaleX(-1);
-      left: -2em;
+      left: 0em;
     }
     .swiper-pagination{
-    bottom: 1em;transform: translateX(-100%);}
+    bottom: 0em;}
     .swiper-pagination-bullet{
-        width: 1em;
-        height: 1em;
-          background:#B4B4B4;opacity: 1;
+        width: .3em;
+        height: .3em;
+          background:#367d7b66;opacity: 1;
+
 
     }
-    .swiper-pagination-bullet-active{background:#22491B;}
-
+    .swiper-pagination-bullet-active{background:#367E7C;}
     
 /*
   .slider {
@@ -131,33 +132,31 @@
 .s4 {
 @apply flex-col;
   height: auto;
-  padding:3em 0 2em;
+  padding:3em 0 3em;
 font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
-
-
-.main {
-  padding: 0 0;
-  width: 100%;
-  margin: 0 auto;
+    .t{
+    width: sizem(340);margin-bottom: 2em;}
+.box{
+  display: flex;
+  gap:0;width: 100%;
+    align-items:flex-start;
+    flex-wrap: wrap;
 }
-
-.txt {margin: 2.3em auto 0em;
-  width: 77%;
-}
+    .en{position: absolute;top:sizem(250);left:sizem(2);margin: 0;
+    width: sizem(45);}
 
 
 .slider {
-  width:sizem(900);
-      height: sizem(257);
+  width:sizem(320);
+      height: sizem(210);
       overflow: auto;
 .swiper {
 
-  width:sizem(510);
-      .swiper-slide {width: 100%; margin: 0 sizem(30);
-  img{width: 100%;height: 100%;}
+  width:sizem(320);
+      .swiper-slide {width: 100%;
       }
   }
 }
