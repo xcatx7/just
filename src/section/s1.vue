@@ -1,8 +1,8 @@
 <template>
   <article class="s1">
     <!--  
-
-    <img src="./s1/pc.jpg" class="t0" alt="" />  
+ 
+    <img src="./s1/pc.jpg" class="t0" alt="" /> 
 
     -->
     <img src="./s1/leaf.png" class="leaf" alt="" />

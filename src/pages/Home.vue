@@ -27,6 +27,7 @@
     <S9 /></div>
     <S10 />
     <ContactInfo />
+    <Order />
   </div>
 </template>
 
@@ -66,7 +67,7 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
-//import Order from "@/section/order.vue"
+import Order from "@/section/order.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import { onMounted, ref } from "vue"
 

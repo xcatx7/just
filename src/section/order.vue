@@ -131,11 +131,11 @@
       <!-- Contact Info -->
     </div>
 
-    <!-- Map -->
-    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
+    <!-- Map -->
+    <Map v-if="info.address" />
   </div>
 </template>
 
@@ -147,52 +147,15 @@
   padding-top: size(280);
   overflow: hidden;
   min-height: size(500);
-
-  .bg-image {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
-
-  &:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #666;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-
 }
 
 .order {
   position: relative;
   width: 100%;
   padding-top: 0;
+  display: flex;
+  
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-      }
-    }
-  }
 
   .order-title {
     font-size: size(40);

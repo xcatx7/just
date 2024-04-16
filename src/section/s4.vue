@@ -24,6 +24,11 @@
       <span class="caption">{{ img.caption }}</span>
         </swiper-slide>
       </swiper>
+  <!--   <div class="arrows">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div> -->  
 
 
     </div>
@@ -40,7 +45,7 @@
   @apply relative flex items-center justify-center text-[#633804];
   width: 100%;
   height:auto;
-  padding:2.7em 0 5em 0;
+  padding:2.7em 0 3em 0;
   font-size:size(28);
   gap:1.5em;
   flex-wrap: wrap;
@@ -52,6 +57,7 @@
   gap:.8em;width: 100%;
     align-items:flex-start;
 }
+// .arrows{position: absolute;left: size(-440);width: size(440);bottom: 0;}
     .en{
     width: size(415);margin:1.5em auto auto 4.8em;flex: 0;}
 
@@ -59,11 +65,11 @@
 
 .slider {
     margin: 0 0 0 auto;padding:0;
-    overflow: hidden;
+   // overflow: hidden;
    // flex-basis: 100%;
     width: size(1330);
-      height: size(335);
-.swiper {height: 100%;padding:0;
+      height:auto;
+.swiper {height: 100%;padding:0 0 1.8em;
 
       .swiper-slide {
           width: size(510);margin: 0;height: 100%;
@@ -76,7 +82,7 @@
   .swiper-button-next{
       position: absolute;
       bottom: 0em;
-      right: 0em;
+      right: calc(50% - 5.4em);
       width:1.8em;
       height: 1.8em;
       display: flex;
@@ -92,10 +98,10 @@
     }
     }
     .swiper-button-prev{transform: scaleX(-1);
-      left: 0em;
+      left: calc(50% - 5.4em);
     }
     .swiper-pagination{
-    bottom: 0em;}
+    bottom: .35em;}
     .swiper-pagination-bullet{
         width: .3em;
         height: .3em;
