@@ -80,10 +80,10 @@
   .swiper-button-prev,
   .swiper-button-next{
       position: absolute;
-    bottom: -2.5em;
-      right: calc(50% - 3.4em);
-      width:1.8em;
-      height: 1.8em;
+    bottom: -3em;
+      right: calc(50% - 4.7em);
+      width:3em;
+      height: 3em;
       display: flex;
       pointer-events: stroke;
       cursor: pointer;z-index: 15;
@@ -98,7 +98,7 @@
     }
     }
     .swiper-button-prev{transform: scaleX(-1);
-      left: calc(50% - 3.4em);
+      left: calc(50% - 4.7em);
     }
     .swiper-pagination{
     bottom: -2.1em;}

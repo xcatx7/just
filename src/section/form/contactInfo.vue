@@ -3,11 +3,11 @@
 
   <!-- Mobile contact info -->
   <div class="mo-contact-info">
-    <div class="flex flex-col contact-item justify-center items-center" 
-      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+    <a class="flex flex-col contact-item justify-center items-center" 
+      @click="modalType = 'phone';go()" v-if="info.phone">
       <img src="@/section/form/phone.svg" alt="貴賓專線" srcset="" />
       <div>貴賓專線</div>
-    </div>
+    </a>
     <div class="flex flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/form/pen.svg" alt="立即預約" srcset="" />
       <div>立即預約</div>

@@ -11,7 +11,8 @@
 
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
-        :slidesPerView="1"
+        :slidesPerView="isMobile?1:1.3"
+        :centeredSlides="true"
         :spaceBetween="40"
         :pagination="{ clickable: true }"
         :navigation="false"
@@ -65,7 +66,7 @@
     margin: 0 auto 0 auto;
     
    // flex-basis: 100%;
-    width: size(1834);overflow: visible;
+    width: 100%;overflow: visible;
       height:auto;
 .swiper {height: 100%;overflow: visible;
 
@@ -73,7 +74,7 @@
       .swiper-slide {
           width: 100%;margin: 0;height: 100%;
   img{width: 100%;
-      height: size(998);
+      height: auto;
       border-radius: size(117);}
       .caption{
 				@apply font-['Noto_Serif_TC'];
