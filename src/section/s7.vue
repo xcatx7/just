@@ -68,7 +68,7 @@
   img{width: 100%;height: 100%;}
       .caption{
 				@apply font-['Noto_Serif_TC'];
-				font-size: size(22);display: block;
+				font-size: size(30);display: block;
         width: 100%;letter-spacing: .06em;
 				font-weight: 600;
         color: #367E7C;text-align: right;margin:.3em auto 0;
@@ -80,7 +80,7 @@
   .swiper-button-prev,
   .swiper-button-next{
       position: absolute;
-    bottom: -3em;
+    bottom: -2.5em;
       right: calc(50% - 3.4em);
       width:1.8em;
       height: 1.8em;
@@ -101,7 +101,7 @@
       left: calc(50% - 3.4em);
     }
     .swiper-pagination{
-    bottom: -2.6em;}
+    bottom: -2.1em;}
     .swiper-pagination-bullet{
         width: .3em;
         height: .3em;
@@ -169,7 +169,7 @@ gap:0em;
       .swiper-slide {
   width:sizem(160);
       .caption{
-				font-size: sizem(12);
+				font-size: sizem(16);
       }
       }
   }

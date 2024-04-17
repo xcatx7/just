@@ -3,14 +3,18 @@
     <!--  
  
 
-    -->
     <img src="./s1/pc.jpg" class="t0" alt="" /> 
+    -->
     <img src="./s1/leaf.png" class="leaf" alt="" />
-    <img src="./s1/box1.png" class="box1" alt="" />
-    <img src="./s1/box2.png" class="box2" alt="" />
+    <img src="./s1/box1.png" class="box1" alt="" data-aos="fade-down"
+      data-aos-delay="800"
+      data-aos-duration="1600" />
+    <img src="./s1/box2.png" class="box2" alt="" data-aos="fade-up"
+      data-aos-delay="600"
+      data-aos-duration="1600" />
     <img src="./s1/flower2.png" class="flower2" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="1000"
       data-aos-duration="1600" />
     <img src="./s1/building.png" class="building" alt="" />
     <div class="txt">
@@ -19,7 +23,7 @@
       class="logo"
       alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="0"
       data-aos-duration="1600"
     />
     <img
@@ -27,7 +31,7 @@
       class="t1"
       alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="200"
       data-aos-duration="1600"
     />
     <img
@@ -35,7 +39,7 @@
       class="t2"
       alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="400"
       data-aos-duration="1600"
     />
     </div>

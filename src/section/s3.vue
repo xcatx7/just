@@ -2,18 +2,21 @@
   <article class="s3">
     <img src="./s1/flower1.png" class="flower1" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="400"
       data-aos-duration="1600" />
     <img src="./s1/flower2.png" class="flower2" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="600"
       data-aos-duration="1600" />
     <img src="./s3/en.svg" class="en">
     <div class="view">
       <fullview />
     </div>
     <div class="t">
-      <div class="t1 " >繁華映綠 文教馥域</div>
+      <div class="t1 "
+      data-aos="zoom-in"
+      data-aos-delay="0"
+      data-aos-duration="1300" >繁華映綠 文教馥域</div>
     </div>
   </article>
 </template>
@@ -23,7 +26,7 @@
 
 .s3 {
   @apply relative w-full z-0;
-  height: size(930);
+  height: size(1150);
   font-size: size(15);
   .en{
     @apply absolute;
@@ -46,7 +49,7 @@
     margin: 0 auto;
     .t1 {
       @apply text-center  font-['Noto_Serif_TC'];
-      font-size: size(44);
+      font-size: size(60);
       font-weight: 700;
       color: #367E7C;
       margin-bottom: .1em;
@@ -55,8 +58,8 @@
 
   .view {
     @apply w-full absolute bottom-0 left-0 right-0 z-20;
-    width: size(1280);
-    height: size(750);margin: auto;
+    width: size(1600);
+    height: size(939);margin: auto;
   }
 }
 
@@ -67,7 +70,7 @@
 
 @media screen and (max-width: 767px) {
   .s3 {
-    height: sizem(650);
+    height: sizem(1050);
   .en{
     top:sizem(10);
     right: sizem(10);
@@ -85,7 +88,7 @@
       top: sizem(90);
       width: sizem(310);
       .t1 {
-        font-size: sizem(30);
+        font-size: sizem(35);
         margin-bottom: sizem(20);
       }
       .t2 {
@@ -102,7 +105,7 @@
 
     .view {
     width: sizem(350);
-      height: sizem(500);
+      height: sizem(900);
     }
   }
 }

@@ -2,24 +2,24 @@
   <article class="s2">
     <img src="./s1/flower1.png" class="flower1" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="1200"
       data-aos-duration="1600" />
     <img src="./s1/flower2.png" class="flower2" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="0"
       data-aos-duration="1600" />
     <div class="view">
       <fullview />
     </div>
     <div class="t">
-      <div class="t1 " >五股豐收之境<br v-if="isMobile"> 都心熟成之地</div>
-      <div class="t2">市心珍藏 千坪美玉 成泰繁華 大隱森境
-      </div>
-      <div class="t3"><span>五股精華市區</span>成泰路商圈機能豐美，水碓社區、德音生活圈，在地隱富聚落，因倚公園而享「小陽明山」美譽，為五股人文與景觀兼具的成熟美地。
+      <h3 class="t1" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1300">五股豐收之境<br v-if="isMobile"> 都心熟成之地</h3>
+      <h4 class="t2" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1300">市心珍藏 千坪美玉 成泰繁華 大隱森境
+      </h4>
+      <div class="t3" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500"><span>五股精華市區</span>成泰路商圈機能豐美，水碓社區、德音生活圈，在地隱富聚落，因倚公園而享「小陽明山」美譽，為五股人文與景觀兼具的成熟美地。
         <div class="hr"></div>
         <span>新北交通樞紐</span>新北重量級動力軸線，車程約4分鐘上五股交流道；台64、65線縱橫大台北連接雙高，近距新莊副都心繁榮共享，桃園機場、松山機場約20分鐘可達。
       </div>
-      <div class="b"><img src="./s2/t1.png"><img src="./s2/t2.png"><img src="./s2/t3.png"></div>
+      <div class="b"><img src="./s2/t1.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300"><img src="./s2/t2.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300"><img src="./s2/t3.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300"></div>
     </div>
   </article>
 </template>
@@ -29,8 +29,8 @@
 
 .s2 {
   @apply relative w-full;
-  height: size(1440);
-  font-size: size(15);
+  height: calc(#{size(1440)} + #{size(-450)} + 28em);
+  font-size: calc(13px + #{size(4)});
   z-index: 3;
   
 .flower1{
@@ -42,29 +42,29 @@
   .t {
     @apply absolute z-20 text-white;
     top: size(220);
-    width: size(900);
+    width: 47.5em;
     left:0;
     right: 0;
     margin: 0 auto;
     .t1 {
       @apply text-center  font-['Noto_Serif_TC'];
-      font-size: size(44);
+      font-size: 2.2em;
       font-weight: 700;
       margin-bottom: .1em;
     }
     .t2 {
       @apply text-center  font-['Noto_Serif_TC'];
-      font-size: size(28);
+      font-size:1.4em;
       font-weight: 300;
-      margin-bottom: size(23);
+      margin-bottom: 1em;
     }
     .t3 {
-      @apply text-left text-[#FFF];
-      font-size: size(12);
+      @apply text-[#FFF];
       font-weight: 300;
       margin-bottom: size(50);
-      span{font-size: 1.3em; margin: 0 .5em 0 0;
-      font-weight: 500;}
+      text-align: justify;
+      span{font-size: 1.3em; margin: -.2em .5em .5em 0;
+      font-weight: 500; float: left;}
       .hr{width: 100%;height: 1px;background: #FFF;margin: .5em auto;}
     }
   }
@@ -72,15 +72,15 @@
     display: flex;
     justify-content:space-between;
     img{
-      width: size(226);
+      width: 14.5em;
     }
   }
 
   .view {
     @apply w-full absolute bottom-0 left-0 right-0 z-20;
-    width: size(1790);
-    height: size(1415);margin: auto;
-    border-radius: size(116);overflow: hidden;
+    width: size(1790);padding: calc(#{size(-450)} + 28em) 0 0 0 ;
+    height:calc(#{size(1440)} + #{size(-450)} + 28em) ;margin: auto;
+    border-radius: size(116);overflow: hidden;background: #0a4370;
   }
 }
 
@@ -91,8 +91,8 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(1170);
-        font-size: sizem(13);
+    height: sizem(1200 + 800);
+        font-size: sizem(16);
   
    // background: #1b527a;
     &::after {
@@ -114,22 +114,22 @@
     .t {
       @apply absolute z-20 ;
       top: sizem(100);
-      width: sizem(310);
+      width: sizem(320);
       .t1 {
-        font-size: sizem(30);
+        font-size: sizem(35);
         margin-bottom: sizem(10);
       }
       .t2 {
-        font-size: sizem(14);
+        font-size: sizem(17);
         font-weight: 400;
         width: 100%;
         margin-bottom: sizem(20);
       }
       .t3 {
-        font-size: sizem(13);
+        font-size: sizem(16);
         margin: sizem(20);
       width: auto auto sizem(280) auto;
-      span{display: block;}
+      span{display: block; float: none;margin: 0;}
       .hr{margin: 1em auto;}
       }
     }
@@ -137,14 +137,14 @@
 flex-wrap: wrap;
     justify-content:center;gap: 1em;
     img{
-      width: sizem(140);
-      &:last-child{margin: -1.8em auto 0;}
+      width: sizem(290);margin: 0 auto -2.6em;
+    //  &:last-child{margin: -1.8em auto 0;}
     }
   }
 
-    .view {padding:sizem(370) 0 0 0 ;
+    .view {padding:sizem(800) 0 0 0 ;
     width: sizem(360);
-      height: sizem(1170);background: #0a4370;
+      height: sizem(1200 + 800);
     }
   }
 }

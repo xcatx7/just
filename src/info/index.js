@@ -8,14 +8,14 @@ export default {
   },
   address1: "接待會館", //按鈕區的--- 如空白會只呈現地址
   address2: "接待會館", //map點下確認的--- 如空白會顯示"導航地址"
-  address: "新北市新莊區中原路101號對面",
+  address: "新北市五股區成泰路一段205號",
   googleSrc:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.730134878716!2d121.4326055749291!3d25.07713427778849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a622bb750e21%3A0x96e0fc63acf2d683!2zMjQ45paw5YyX5biC5LqU6IKh5Y2A5oiQ5rOw6Lev5LiA5q61MjA16Jmf!5e0!3m2!1szh-TW!2stw!4v1713311761904!5m2!1szh-TW!2stw",
-  googleLink: "https://maps.app.goo.gl/izBcPxPhYjCMDFjV9",
-  phone: "02-000",
-  fbLink: "https://www.facebook.com/61554320400557",
-  fbMessage: "https://m.me/61554320400557",
-  line: "https://lin.ee/jX9Xyhz",
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14454.920536892649!2d121.4351805!3d25.0771343!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a76c468f4f33%3A0xaf99707120ba2c10!2z5oiQ5rOw576OIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1713332905481!5m2!1szh-TW!2stw",
+  googleLink: "https://maps.app.goo.gl/7Ud9m1qUrNXPHC7H8",
+  phone: "02-82922299",
+  fbLink: "https://www.facebook.com/61553991285623",
+  fbMessage: "https://m.me/61553991285623",
+  line: "https://lin.ee/4Az6cpy",
   caseName: caseName,
   houseInfos: [ 
     ["投資建設", "合登建設"],

@@ -5,14 +5,17 @@
 
     -->
     <div class="box2">
-    <img src="./s1/box2.png" alt="" /></div>
+    <img src="./s1/box2.png" alt=""
+      data-aos="fade"
+      data-aos-delay="0"
+      data-aos-duration="1600" /></div>
     <img src="./s1/flower1.png" class="flower1" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="400"
       data-aos-duration="1600" />
     <img src="./s1/flower2.png" class="flower2" alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="600"
       data-aos-duration="1600" />
     <img src="./s1/flower2.png" class="flower3" alt=""
       data-aos="zoom-in"
@@ -25,10 +28,13 @@
       class="logo"
       alt=""
       data-aos="zoom-in"
-      data-aos-delay="500"
+      data-aos-delay="0"
       data-aos-duration="1600"
     />
-    <div class="t1">｜千坪美玉｜景觀2-3房｜</div>
+    <div class="t1"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      data-aos-duration="1600">｜千坪美玉｜景觀2-3房｜</div>
     </div>
   </article>
 </template>
@@ -53,9 +59,9 @@
   img{transform: rotate(90deg);transform-origin: 0 0;width: size(23);}
   }
 .flower1{
-    @apply absolute;top:size(-90);left:size(-185);pointer-events: none;width: size(575);z-index: 22;}
+    @apply absolute;top:size(-90);left:size(-185);pointer-events: none;width: size(575);z-index: 2;}
 .flower2{
-    @apply absolute;top:size(-90);left:size(380);pointer-events: none;width: size(220);z-index: 22;}
+    @apply absolute;top:size(-90);left:size(380);pointer-events: none;width: size(220);z-index: 2;}
 .flower3{
     @apply absolute;bottom:size(-60);right:size(340);pointer-events: none;width: size(220);}
 .building{

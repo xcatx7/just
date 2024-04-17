@@ -1,18 +1,18 @@
 <template>
   <article class="s6" ref="s6">
-    <img src="./s1/flower1.png" class="flower1" alt=""
+    <div class="flower1"
       data-aos="zoom-in"
       data-aos-delay="500"
-      data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower2" alt=""
+      data-aos-duration="1600"><img src="./s1/flower1.png" alt="" /></div>
+    <div class="flower2"
       data-aos="zoom-in"
       data-aos-delay="500"
-      data-aos-duration="1600" />
+      data-aos-duration="1600"><img src="./s1/flower2.png" alt="" /></div>
 
     <div class="slider" data-aos="fade">
       <swiper  class="slide"
         :slidesPerView="1"
-        :spaceBetween="10"
+        :spaceBetween="40"
         :pagination="{ clickable: true }"
         :navigation="false"
         :loop="true"
@@ -50,10 +50,14 @@
     flex-direction:column;
   
 .flower1{
-    @apply absolute;pointer-events: none;top:size(-140);right:size(-300);width: size(900);}
+    @apply absolute;pointer-events: none;top:size(-80);right:size(-300);width: size(900);
+    img{width: 100%;opacity: .3}
+  }
     
 .flower2{
-    @apply absolute;pointer-events: none;bottom:size(-3);left:size(-420);width: size(800);}
+    @apply absolute;pointer-events: none;bottom:size(-3);left:size(-420);width: size(800);
+    img{width: 100%;opacity: .3}
+  }
 
 
 
@@ -61,7 +65,7 @@
     margin: 0 auto 0 auto;
     
    // flex-basis: 100%;
-    width: size(1834);overflow: hidden;
+    width: size(1834);overflow: visible;
       height:auto;
 .swiper {height: 100%;overflow: visible;
 
@@ -143,14 +147,14 @@
 .s6 {
 @apply flex-col;
   height: auto;
-  padding:3em 0 2em;
+  padding:3em 0 0em;
 font-size:sizem(14);
 flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
 
 
-.txt {margin: 2.3em auto 0em;
+.txt {margin: 2.3em auto 1em;
   width: 77%;
 }
 
@@ -163,7 +167,7 @@ gap:0em;
   width:100%;
       .swiper-slide {
       .caption{
-				font-size: sizem(15);
+				font-size: sizem(20);
       }
       }
   }

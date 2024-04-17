@@ -1,10 +1,22 @@
 <template>
   <article class="s8">
     <div class="t">
-      <div class="t1">精品風格 上質美學</div>
-    <img src="./s8/logosm.png" alt="" class="logos" v-if="isMobile">
-    <img src="./s8/logos.png" alt="" class="logos" v-else>
-    <img src="./s8/en.svg" alt="" class="en">
+      <div class="t1"
+      data-aos="zoom-in"
+      data-aos-delay="0"
+      data-aos-duration="1300">精品風格 上質美學</div>
+    <img src="./s8/logosm.png" alt="" class="logos" v-if="isMobile"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1300">
+    <img src="./s8/logos.png" alt="" class="logos" v-else
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1300">
+    <img src="./s8/en.svg" alt="" class="en"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+      data-aos-duration="1300">
     </div>
   </article>
 </template>
@@ -14,7 +26,7 @@
 
 .s8 {
   @apply relative w-full;
-  height: size(990);
+  height: size(1050);
   font-size: size(15);
   z-index: 3;
   //background: #0003;
@@ -27,23 +39,23 @@
   
   .t {
     @apply absolute z-20 text-white;
-    top: size(155);
-    width: size(1597);
+    top: size(120);
+    width: 100%;
     left:0;
     right: 0;
     margin: 0 auto;
     .t1 {
       @apply text-center  font-['Noto_Serif_TC'];
-      font-size: size(44);
+      font-size: size(53);
       font-weight: 700;
-      margin-bottom: 1.2em;
+      margin-bottom: .8em;
     }
     .logos {
-    width: size(1590);
+    width: size(1800);
     margin: 0 auto 3.6em;display: block;
     }
     .en {
-    width: size(385);
+    width: size(370);
     margin: 0 auto;display: block;
 
     }
@@ -71,7 +83,7 @@
 
 @media screen and (max-width: 767px) {
   .s8 {
-    height: sizem(470);
+    height: sizem(700);
   
     .bg{
     @apply absolute;
@@ -85,14 +97,14 @@
       top: sizem(50);
       width: 100%;
       .t1 {
-        font-size: sizem(30);
+        font-size: sizem(35);
         margin-bottom: sizem(20);
       }
     .logos {
     width: sizem(350);
     }
     .en {
-    width: sizem(100);
+    width: sizem(130);
 
     }
     }

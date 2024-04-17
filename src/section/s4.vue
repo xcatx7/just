@@ -1,7 +1,7 @@
 <template>
   <article class="s4" ref="s4">
-    <img src="./s4/tm.png" class="t" v-if="isMobile">
-    <img src="./s4/t.png" class="t" v-else>
+    <img src="./s4/tm.png" class="t" v-if="isMobile"  data-aos="fade-up">
+    <img src="./s4/t.png" class="t" v-else  data-aos="fade-up">
     <div class="box">
     <img src="./s4/en.svg" class="en" v-if="!isMobile">
     <img src="./s4/enm.svg" class="en" v-else>
@@ -51,7 +51,7 @@
   flex-wrap: wrap;
     flex-direction:column;
     .t{
-    width: size(1440);}
+    width: size(1850);}
 .box{
   display: flex;
   gap:.8em;width: 100%;
@@ -144,14 +144,14 @@ flex-wrap:nowrap;
 margin-bottom:0em;
 gap:0em;
     .t{
-    width: sizem(340);margin-bottom: 2em;}
+    width: sizem(360);margin-bottom: 2em;}
 .box{
   display: flex;
   gap:0;width: 100%;
     align-items:flex-start;
     flex-wrap: wrap;
 }
-    .en{position: absolute;top:sizem(250);left:sizem(2);margin: 0;
+    .en{position: absolute;bottom:sizem(82);left:sizem(2);margin: 0;
     width: sizem(45);}
 
 

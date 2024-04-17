@@ -19,11 +19,11 @@
       <div>FB 諮詢</div>
     </div>
   -->
-    <div class="flex flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'fb'" v-if="info.fbLink">
+    <a class="flex flex-col contact-item justify-center items-center"
+    :href="info.fbLink" target="_blank" v-if="info.fbLink">
       <img src="@/section/form/fb.svg" alt="粉絲專頁" srcset="" />
       <div>粉絲專頁</div>
-    </div>
+    </a>
     <!-- 
     <div class="flex flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
@@ -31,11 +31,11 @@
       <div>地圖導航</div>
     </div>
   -->
-    <div class="flex flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'line'"  v-if="info.line" >
+    <a class="flex flex-col contact-item justify-center items-center"
+     :href="info.line"  target="_blank" v-if="info.line" >
       <img src="@/section/form/line.svg" alt="Line" srcset="" />
       <div>LINE</div>
-    </div>
+    </a>
   </div>
 
   <!-- Modal -->
@@ -119,7 +119,7 @@
     .contact-item {
       height: 100%;
       font-weight: 400;
-      color: #fff;
+      color: #fff;transition: .3s background;
       @media screen and (min-width:768px) {
       padding: .6em;
       &:nth-child(1),
@@ -127,6 +127,7 @@
       padding: 1em;
       border-left: 1px solid #666;
       img {display: none;}
+      &:hover{background: #0003;}
     }
       &:nth-child(3){
       border-left: 1px solid #666;
@@ -138,8 +139,11 @@
       //  margin-bottom: sizem(5);
         max-width:1.3em;
         height: 1.3em;
-        max-height: 1.3em;
+        max-height: 1.3em;transition:.3s transform;
         filter: brightness(0) invert(1);
+      }
+      &:hover{
+      img{transform: scale(1.2);}
       }
     }
 
