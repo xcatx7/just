@@ -49,9 +49,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-.bgs1s2{
-  background-image: url("@/section/s1/bg1m.jpg");
-}
 }
 </style>
 
