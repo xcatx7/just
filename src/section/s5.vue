@@ -20,9 +20,9 @@
           v-for="(item, i) in imgs"
         >
           <img :src="item.img" :alt="item.caption">
-          <div class="vr"><b>{{ item.caption }}</b>樣品屋<span><img src="./s5/a.svg" alt="" srcset="" />請點擊VR實境看房</span>
+          <a :href="item.link" target=" _blank" class="vr"><b>{{ item.caption }}</b>樣品屋<span><img src="./s5/a.svg" alt="" srcset="" />請點擊VR實境看房</span>
     
-          </div>
+          </a>
         </SplideSlide>
       </Splide>
 
@@ -241,18 +241,22 @@ const imgs = [
   {
     img: new URL("../section/s5/1.webp", import.meta.url).href,
     caption: "B2",
+    link:'https://yun.kujiale.com/design/3FO3OSS0JJYJ/airoaming'
   },
   {
     img: new URL("../section/s5/2.webp", import.meta.url).href,
     caption: "C4",
+    link:'https://yun.kujiale.com/design/3FO3OTKP1CLL/airoaming'
   },
   {
     img: new URL("../section/s5/3.webp", import.meta.url).href,
     caption: "B4",
+    link:'https://yun.kujiale.com/design/3FO3OU5TTJ96/airoaming'
   },
   {
     img: new URL("../section/s5/4.webp", import.meta.url).href,
     caption: "C1",
+    link:'https://yun.kujiale.com/design/3FO3OSE4054I/airoaming'
   },
 ]
 </script>
