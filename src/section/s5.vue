@@ -183,7 +183,6 @@ h4{color: #888;
    // gap: size(59);
    height: sizem(700);
           font-size: sizem(16);
-    background-image: url("@/section/s5/bgm.webp");
     .slide {
       width: 100%;
       height: sizem(240);
