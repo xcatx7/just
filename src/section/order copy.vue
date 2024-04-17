@@ -1,24 +1,141 @@
 <template>
-  <div id="order" class="relative text-center">
-    <div class="order">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center relative z-10">
         {{ info.order.title }}
       </div>
-    <img class="formimg" src="@/section/form/form.png" alt="" />
+      <div class="order-subTitle text-center relative z-10">
+        {{ info.order.subTitle }}
+      </div>
+      <!-- <div class="cus-divider"></div> -->
 
+      <!-- Title Image
+      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
+ -->
+      <!-- Custom Image -->
+
+      <!-- Form -->
+      <div class="form mx-auto relative flex justify-center z-10">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row"
+            ><span>姓名<span>(必填)</span></span>
+            <input
+              type="text"
+              placeholder="姓名"
+              class="input w-full rounded-none"
+              :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)"
+          /></label>
+          <label class="row"
+            ><span>手機<span>(必填)</span></span>
+            <input
+              type="text"
+              placeholder="手機"
+              class="input w-full rounded-none"
+              :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)"
+          /></label>
+
+          <label class="row" v-if="info.room_type"
+            ><span>需求</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.room_type"
+            >
+              <!--     <option value="" selected disabled>請選擇房型</option>  -->
+              <option
+                v-for="room in info.room_type"
+                :value="room"
+                v-text="room"
+              ></option></select
+          ></label>
+          <label class="row" v-if="info.budget"
+            ><span>預算</span>
+            <select
+              class="select w-full rounded-none bg-white"
+              v-model="formData.budget"
+            >
+              <!--   <option value="" selected disabled>請選擇預算</option> -->
+              <option
+                v-for="budget in info.budget"
+                :value="budget"
+                v-text="budget"
+              ></option>
+            </select>
+          </label>
+          <label class="row"
+            ><span>居住縣市</span>
+            <select class="select w-full rounded-none" v-model="formData.city">
+              <option value="" selected disabled>請選擇城市</option>
+              <option v-for="city in cityList" :value="city.value">
+                {{ city.label }}
+              </option>
+            </select></label
+          >
+          <label class="row"
+            ><span>居住地區</span>
+            <select class="select w-full rounded-none" v-model="formData.area">
+              <option value="" selected disabled>請選擇地區</option>
+              <option v-for="area in areaList" :value="area.value">
+                {{ area.label }}
+              </option>
+            </select></label
+          >
+        </div>
+        <div class="right">
+          <textarea
+            :value="formData.msg"
+            @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none"
+            placeholder="請輸入您的留言"
+          ></textarea>
+        </div>
+      </div>
+
+      <!-- Policy -->
+      <div class="flex gap-2 items-center justify-center control relative z-10">
+        <input
+          type="checkbox"
+          v-model="formData.policyChecked"
+          :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md"
+        />
+        <p class="text-[#fff]">
+          本人知悉並同意<label
+            for="policy-modal"
+            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70"
+            >「個資告知事項聲明」</label
+          >內容
+        </p>
+      </div>
+      <Policy />
+
+      <!-- Recaptcha -->
+      <vue-recaptcha
+        class="flex justify-center mt-8 relative z-10"
+        ref="recaptcha"
+        :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify"
+        @expired="onRecaptchaUnVerify"
+      />
+
+      <!-- Send -->
+      <div
+        class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
+        @click="send()"
+      >
+        {{ sending ? "發送中.." : "即刻預約" }}
+      </div>
+
+      <!-- Contact Info -->
     </div>
 
 
     <!-- HouseInfo -->
-    <HouseInfo /></div>
+    <HouseInfo />
     <!-- Map -->
     <Map v-if="info.address" />
-    
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#1D3736] text-[#FFF]">
-        合登建設 成泰美copyright
-    </div>
   </div>
 </template>
 
@@ -27,10 +144,9 @@
 
 .order-section {
   position: relative;
-  // padding-top: size(280);
-  overflow: hidden;width: size(853);
-  background:#117568;z-index: 21;
-  border-radius: size(150) 0 0 size(150);padding: 2em 0;
+  padding-top: size(280);
+  overflow: hidden;
+  min-height: size(500);
 }
 
 .order {
@@ -38,20 +154,14 @@
   width: 100%;
   padding-top: 0;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction:row-reverse;
-  
   
 
-.formimg{width: size(590);}
+
   .order-title {
-      @apply absolute font-['Noto_Serif_TC'];
-    top: 0;right: 0;height: 100%;width: 1.9em;
-    background:#4D4D4D ;
-    font-size: size(36);
-    font-weight: 700;padding: 3em 0;
+    font-size: size(40);
+    font-weight: 700;
     color: #fff;
-   // padding-top: 4em;
+    padding-top: 4em;
   }
 
   .order-title-img {
@@ -167,9 +277,8 @@
 
 @media screen and (max-width: 768px) {
   .order-section {
-   // min-height: sizem(800);
-    position: relative;width: sizem(360);
-    margin-bottom: 2em;
+    min-height: sizem(800);
+    position: relative;
     // overflow: hidden;
     // padding-top: sizem(200);
 
@@ -192,7 +301,6 @@
       width: sizem(315);
       margin-bottom: sizem(22);
     } */
-.formimg{width: sizem(280);margin-right:  sizem(50);}
 
     .order-title-img {
       width: sizem(200);
@@ -215,7 +323,7 @@
     }
 
     .order-title {
-      font-size: sizem(20);
+      font-size: sizem(25);
       // padding-top:4.5em;
     }
     .order-subTitle {

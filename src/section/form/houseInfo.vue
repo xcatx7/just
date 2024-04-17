@@ -1,13 +1,17 @@
 <template>
     <div class="house" v-if="info.houseInfos.length > 0">
-        <div class="flex h-full flex-col md:flex-row items-center justify-between">
-            <div class="flex-1 items-center justify-center py-10">
+    <img src="@/section/s1/flower1.png" class="flower1" alt=""
+      data-aos="zoom-in"
+      data-aos-delay="500"
+      data-aos-duration="1600" />
+        <div class="relative flex h-full flex-col md:flex-row items-center justify-between z-10">
+            <div class="flex-1 items-center justify-center">
                 <div class="h-full info-box mx-auto flex flex-col items-center justify-center">
-                    <div class="title">建案資訊</div>
+                    <div class="title  font-['Noto_Serif_TC']">建案資訊<img src="@\section\s5\b2.webp" alt="" /></div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 border-l-2 border-[#ceaa6d] pl-2 text-[#ceaa6d] font-[700]" v-html="item[0]"></p>
+                            <p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
                             </p>
@@ -17,15 +21,6 @@
             </div>
         </div>
     </div>
-    <!-- 
-    <div class="bg-[#ceaa6d]  py-5 flex items-center justify-center">
-            <p class="db"><img src="@/section/form/dblogo.svg" alt="得邦廣告" srcset=""></p>
-    </div>
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
-        <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="//h65.tw/img/footerLogo.gif" alt="立炘數位" srcset=""></a>
-        <a href="https://www.h35.tw/admin/test/login" target="_blank" class="text-white text-xs">網頁製作</a>
-    </div> -->
 </template>
 
 <style lang="scss">
@@ -42,25 +37,32 @@
 // }
 .displaynone{display: none;}
 .house {
+    position: relative;
    // height: auto;
     font-size: size(22);
-    background: #FFF;
+  //  background: #FFF;
    // height:4em;
-    img{height: 1.3em;vertical-align: middle;}
+   margin: auto 1.2em auto auto;
+    img{//height: 1.3em;
+        vertical-align: middle;}
 }
+.flower1{
+    @apply absolute;bottom:size(-70);right:size(-130);pointer-events: none;width: size(290);height: auto;}
 .info-box {
-    width: size(800);
+    width: size(950);
 
     .title {
-        font-size: size(40);
+        font-size: size(45);
         font-weight: 700;
-        color: #ceaa6d;
-        margin: 0 auto 1em auto;
+        color: #666;
+        margin: 0 auto 0em 0;
+        text-align: left;
+        img{height: .5em;width: 11em;margin-left: .5em;}
     }
 
     .info-items {
-        row-gap: size(20);
-        column-gap: size(20);
+        row-gap: size(10);
+        column-gap: size(10);
 
         .item {
             line-height: size(17);
@@ -79,7 +81,7 @@
 .house {
     // background:#fff;
   //  height: sizem(400);
-    font-size: sizem(14);
+    font-size: sizem(13);
 }
     .footer {
         margin-bottom: sizem(0);
@@ -87,19 +89,19 @@
     }
 
     .info-box {
-        width: sizem(313);
+        width: sizem(330);
         padding: 0;
 
         .title {
-            font-size: sizem(29);
+            font-size: sizem(20);
             width: auto;
         }
 
         .info-items {
-            row-gap: sizem(20);
+            row-gap: sizem(15);
 
             .item {
-                font-size: sizem(14);
+                font-size: sizem(13);
             }
         }
     }

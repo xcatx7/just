@@ -2,9 +2,9 @@
   <article class="s1">
     <!--  
  
-    <img src="./s1/pc.jpg" class="t0" alt="" /> 
 
     -->
+    <img src="./s1/pc.jpg" class="t0" alt="" /> 
     <img src="./s1/leaf.png" class="leaf" alt="" />
     <img src="./s1/box1.png" class="box1" alt="" />
     <img src="./s1/box2.png" class="box2" alt="" />
@@ -62,7 +62,7 @@
 
   .t0{
     position: absolute;
-    top: 3vw;left: 0;width: 100%;opacity: .60;pointer-events: none;z-index: 50;
+    top: 3vw;left: 0;width: 100%;opacity: .0;pointer-events: none;z-index: 50;
   }
  // background-image: url("@/section/s1/bg1.jpg");
  // background-position: top center;
