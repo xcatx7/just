@@ -38,8 +38,8 @@
               type="text"
               placeholder="請輸入您的E-mail"
               class="input w-full rounded-none"
-              :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)"
+              :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)"
           /></label>
           <label class="row" v-if="info.time"
             >
@@ -76,7 +76,6 @@
 (二)客戶管理與服務<br>
 (三)本公司行銷業務之推廣</p>
       </div>
-      <Policy />
       <!-- Send -->
       <div
         class="send mt-2 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
@@ -95,6 +94,7 @@
     <!-- Map -->
     <Map v-if="info.address" />
     
+    <Policy />
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#1D3736] text-[#FFF]">
         合登建設 成泰美copyright
     </div>
@@ -108,7 +108,7 @@
   position: relative;
   // padding-top: size(280);
   overflow: hidden;width: size(853);
-  background:#117568;z-index: 21;
+  background:#117568;z-index: 22;
   border-radius: size(150) 0 0 size(150);padding: 2em 2em 2em 0;
 }
 

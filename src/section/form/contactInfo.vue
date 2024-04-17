@@ -105,7 +105,7 @@
 @import "@/assets/style/function.scss";
   .mo-contact-info {
     @apply  flex w-full;
-    z-index: 99;
+    z-index: 80;
     position: fixed;
     top: 0;
     left: 0;
@@ -163,6 +163,7 @@
     bottom: 0;
       background: #999;
     height: sizem(63);
+    padding: 0;
 
     .contact-item {
       height: 100%;

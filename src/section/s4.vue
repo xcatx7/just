@@ -69,11 +69,11 @@
    // flex-basis: 100%;
     width: size(1330);
       height:auto;
-.swiper {height: 100%;padding:0 0 1.8em;
+.swiper {height: 100%;padding:0 0 3em;
 
       .swiper-slide {
           width: size(510);margin: 0;height: 100%;
-  img{width: 100%;height: 100%;}
+  img{width: 100%;height:auto;}
       }
   }
   }
@@ -151,13 +151,13 @@ gap:0em;
     align-items:flex-start;
     flex-wrap: wrap;
 }
-    .en{position: absolute;bottom:sizem(82);left:sizem(2);margin: 0;
+    .en{position: absolute;bottom:sizem(122);left:sizem(2);margin: 0;
     width: sizem(45);}
 
 
 .slider {
   width:sizem(320);
-      height: sizem(210);
+   //   height: sizem(210);
       overflow: auto;
 .swiper {
 

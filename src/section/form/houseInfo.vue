@@ -47,7 +47,7 @@
         vertical-align: middle;}
 }
 .flower1{
-    @apply absolute;bottom:size(-70);right:size(-130);pointer-events: none;width: size(290);height: auto;}
+    @apply absolute;bottom:size(-170);right:size(-130);pointer-events: none;width: size(290);height: auto;}
 .info-box {
     width: size(950);
 
@@ -66,7 +66,7 @@
 
         .item {
             line-height: size(17);
-            font-size: size(16);
+            font-size: size(19);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;

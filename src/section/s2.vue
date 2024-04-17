@@ -40,7 +40,7 @@
     @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;pointer-events: none;}
 
   .t {
-    @apply absolute z-20 text-white;
+    @apply absolute z-30 text-white;
     top: size(220);
     width: 47.5em;
     left:0;
@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 767px) {
   .s2 {
-    height: sizem(1200 + 800);
+    height: sizem(1200 + 670);
         font-size: sizem(16);
   
    // background: #1b527a;
@@ -112,7 +112,7 @@
 
 
     .t {
-      @apply absolute z-20 ;
+      @apply absolute  ;
       top: sizem(100);
       width: sizem(320);
       .t1 {
@@ -137,14 +137,23 @@
 flex-wrap: wrap;
     justify-content:center;gap: 1em;
     img{
-      width: sizem(290);margin: 0 auto -2.6em;
+      width: sizem(230);margin: 0 auto 0em;
     //  &:last-child{margin: -1.8em auto 0;}
+    &:nth-child(1){
+      margin: 0 0 -1em auto;
+    }
+    &:nth-child(2){
+      margin: 0 auto -1em 0;
+    }
+    &:nth-child(3){
+      margin: 0 0 0em auto;
+    }
     }
   }
 
-    .view {padding:sizem(800) 0 0 0 ;
+    .view {padding:sizem(670) 0 0 0 ;
     width: sizem(360);
-      height: sizem(1200 + 800);
+      height: sizem(1200 + 670);
     }
   }
 }
