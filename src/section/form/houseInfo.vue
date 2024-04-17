@@ -82,7 +82,10 @@
     // background:#fff;
   //  height: sizem(400);
     font-size: sizem(13);
+    margin: 2em auto; 
 }
+.flower1{
+    bottom:sizem(-70);right:sizem(-60);width: sizem(150);}
     .footer {
         margin-bottom: sizem(0);
         //margin-bottom: sizem(63);
@@ -93,15 +96,20 @@
         padding: 0;
 
         .title {
-            font-size: sizem(20);
+            font-size: sizem(35);
             width: auto;
+            img {
+    height: 0.4em;
+    width: 8em;
+    margin-left: 0.5em;margin-right: -6em;
+}
         }
 
         .info-items {
             row-gap: sizem(15);
 
             .item {
-                font-size: sizem(13);
+                font-size: sizem(16);
             }
         }
     }
