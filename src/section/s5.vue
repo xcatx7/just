@@ -56,14 +56,13 @@
           <div class="bottom_me">
           <h4 
       :class="{ active: currentIndex == 2}" @click="splide.go(2)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"/></svg><span>B2</span>/33.37坪</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"/></svg><span>B4</span>/33.37坪</h4>
           <h4 
       :class="{ active: currentIndex == 3}" @click="splide.go(3)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"/></svg><span>C4</span>/35.71坪</h4></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"/></svg><span>C1</span>/35.71坪</h4></div>
           <img src="./s5/b2.webp" class="bottom" alt="" srcset="" />
         </div>
     </div>
-
 
   </article>
 </template>
