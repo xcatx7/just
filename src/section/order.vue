@@ -452,11 +452,11 @@ const send = () => {
     toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
     return
   }
-
+/// XXXXX須改
   if (pass && !sending.value) {
     sending.value = true
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/XXXXX/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
       &budget=${formData.budget}
@@ -475,7 +475,7 @@ const send = () => {
         method: "GET",
       }
     )
-
+//送至表單PHP
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
