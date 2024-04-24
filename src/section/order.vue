@@ -19,8 +19,10 @@
           /></label>
           
           <div class="sex">
-          <label><input  type="radio" name="sex" value="male">先生</label>
-          <label><input  type="radio" name="sex" value="female">女士</label>
+          <label><input  type="radio" name="sex" value="male"
+              @input="(event) => (formData.sex = event.target.value)">先生</label>
+          <label><input  type="radio" name="sex" value="female"
+              @input="(event) => (formData.sex = event.target.value)">女士</label>
         </div>
         </div>
           <label class="row"
@@ -45,12 +47,12 @@
             >
             <select
               class="select w-full rounded-none"
-              v-model="formData.time"
+              v-model="formData.ctime"
             ><option value="" selected disabled>方便連絡時段</option>
               <option
-                v-for="time in info.time"
-                :value="time"
-                v-text="time"
+                v-for="ctime in info.ctime"
+                :value="ctime"
+                v-text="ctime"
               ></option>
             </select>
           </label>
@@ -339,67 +341,52 @@ const sending = ref(false)
 
 const formData = reactive({
   name: "",
+  sex: "",
   phone: "",
-  room_type: "",
-  budget: "",
-  project: "",
-  people: "",
   email: "",
-  city: "",
-  time: "",
-  area: "",
-  msg: "",
+  ctime: "",
+//  msg: "",
   policyChecked: false,
-  r_verify: true,
+  //r_verify: true,
 })
 
 //非必填
 const bypass = [
-  "project",
-  "msg",
-  "people",
+  "sex",
   "email",
-  "room_type",
-  "budget",
-  "city",
-  "time",
-  "area",
+  "ctime",
+//  "msg",
 ]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
+  "性別", //sex
   "手機", //phone
-  "房型", //room_type
-  "預算", //budget
-  "建案", //project
-  "服務專員", //people
   "信箱", //email
-  "居住縣市", //city
-  "聯絡時段", //time
-  "居住地區", //area
-  "備註訊息", //msg
+  "聯絡時段", //ctime
+  //"備註訊息", //msg
   "個資告知事項聲明", //policyChecked
-  "機器人驗證", //r_verify
+  //"機器人驗證", //r_verify
 ])
 
 const areaList = ref([])
-
+/*
 watch(
   () => formData.city,
   (newVal, oldVal) => {
     areaList.value = renderAreaList(newVal)
     formData.area = areaList.value[0].value
   }
-)
-
+)*/
+/*
 const onRecaptchaVerify = () => {
   formData.r_verify = true
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
 }
-
+*/
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search)
   const utmSource = urlParams.get("utm_source")
@@ -455,6 +442,7 @@ const send = () => {
 /// XXXXX須改
   if (pass && !sending.value) {
     sending.value = true
+    /*
     fetch(
       `https://script.google.com/macros/s/XXXXX/exec?name=${formData.name}
       &phone=${formData.phone}
@@ -474,9 +462,9 @@ const send = () => {
       {
         method: "GET",
       }
-    )
+    )*/
 //送至表單PHP
-    fetch("contact-form.php", {
+    fetch("wsform.php", {
       method: "POST",
       body: presend,
     }).then((response) => {
