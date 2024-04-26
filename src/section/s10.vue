@@ -5,7 +5,7 @@
 
     -->
     <div class="box2">
-    <img src="./s1/box2.png" alt=""
+    <img src="./s1/box2.webp" alt=""
       data-aos="fade"
       data-aos-delay="0"
       data-aos-duration="1600" /></div>
