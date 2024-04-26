@@ -1,6 +1,6 @@
 <template>
     <div class="house" v-if="info.houseInfos.length > 0">
-    <img src="@/section/s1/flower1.png" class="flower1" alt=""
+    <img src="@/section/s1/flower1.webp" class="flower1" alt=""
       data-aos="zoom-in"
       data-aos-delay="500"
       data-aos-duration="1600" />

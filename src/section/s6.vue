@@ -3,11 +3,11 @@
     <div class="flower1"
       data-aos="zoom-in"
       data-aos-delay="500"
-      data-aos-duration="1600"><img src="./s1/flower1.png" alt="" /></div>
+      data-aos-duration="1600"><img src="./s1/flower1.webp" alt="" /></div>
     <div class="flower2"
       data-aos="zoom-in"
       data-aos-delay="500"
-      data-aos-duration="1600"><img src="./s1/flower2.png" alt="" /></div>
+      data-aos-duration="1600"><img src="./s1/flower2.webp" alt="" /></div>
 
     <div class="slider" data-aos="fade">
       <swiper  class="slide"

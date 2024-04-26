@@ -5,18 +5,18 @@
 
     <img src="./s1/pc.jpg" class="t0" alt="" /> 
     -->
-    <img src="./s1/leaf.png" class="leaf" alt="" />
-    <img src="./s1/box1.png" class="box1" alt="" data-aos="fade-down"
+    <img src="./s1/leaf.webp" class="leaf" alt="" />
+    <img src="./s1/box1.webp" class="box1" alt="" data-aos="fade-down"
       data-aos-delay="800"
       data-aos-duration="1600" />
-    <img src="./s1/box2.png" class="box2" alt="" data-aos="fade-up"
+    <img src="./s1/box2.webp" class="box2" alt="" data-aos="fade-up"
       data-aos-delay="600"
       data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower2" alt=""
+    <img src="./s1/flower2.webp" class="flower2" alt=""
       data-aos="zoom-in"
       data-aos-delay="1000"
       data-aos-duration="1600" />
-    <img src="./s1/building.png" class="building" alt="" />
+    <img src="./s1/building.webp" class="building" alt="" />
     <div class="txt">
     <img
       src="./s1/logo.svg"

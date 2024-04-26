@@ -95,15 +95,11 @@ onMounted(async () => {
 })
 
 /**
- * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面
- */
+ * 預載圖片，直接帶入路徑，由上而下依序加載，完成後才會關閉loading畫面 */
 const preloadList = [
-  "s2/leaf/1_.png", "s2/leaf/1.png", "s2/leaf/1i.png", "s2/leaf/1im.png",
-  "s2/leaf/2_.png", "s2/leaf/2.png", "s2/leaf/2i.png", "s2/leaf/2im.png",
-  "s2/leaf/3_.png", "s2/leaf/3.png", "s2/leaf/3i.png", "s2/leaf/3im.png",
-  "s2/leaf/4_.png", "s2/leaf/4.png", "s2/leaf/4i.png", "s2/leaf/4im.png",
-  "s2/leaf/5_.png", "s2/leaf/5.png", "s2/leaf/5i.png", "s2/leaf/5im.png",
-  "s2/leaf/6_.png", "s2/leaf/6.png", "s2/leaf/6i.png", "s2/leaf/6im.png",
+  /*
+  "s2/leaf/1_.png"
+ */
 ]
 const preloadThreshold = 0.8
 

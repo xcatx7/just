@@ -9,19 +9,19 @@
       data-aos="fade"
       data-aos-delay="0"
       data-aos-duration="1600" /></div>
-    <img src="./s1/flower1.png" class="flower1" alt=""
+    <img src="./s1/flower1.webp" class="flower1" alt=""
       data-aos="zoom-in"
       data-aos-delay="400"
       data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower2" alt=""
+    <img src="./s1/flower2.webp" class="flower2" alt=""
       data-aos="zoom-in"
       data-aos-delay="600"
       data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower3" alt=""
+    <img src="./s1/flower2.webp" class="flower3" alt=""
       data-aos="zoom-in"
       data-aos-delay="500"
       data-aos-duration="1600" />
-    <img src="./s1/building.png" class="building" alt="" />
+    <img src="./s1/building.webp" class="building" alt="" />
     <div class="txt">
     <img
       src="./s1/logo.svg"

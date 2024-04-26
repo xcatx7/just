@@ -1,10 +1,10 @@
 <template>
   <article class="s3">
-    <img src="./s1/flower1.png" class="flower1" alt=""
+    <img src="./s1/flower1.webp" class="flower1" alt=""
       data-aos="zoom-in"
       data-aos-delay="400"
       data-aos-duration="1600" />
-    <img src="./s1/flower2.png" class="flower2" alt=""
+    <img src="./s1/flower2.webp" class="flower2" alt=""
       data-aos="zoom-in"
       data-aos-delay="600"
       data-aos-duration="1600" />
