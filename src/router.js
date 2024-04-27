@@ -16,7 +16,7 @@ const routes = [{
         name: "phoneThanks",
         component: () =>
             import ("@/pages/PhoneThanks.vue"),
-    },
+    },/*
     {
         name: "404",
         path: "/404",
@@ -32,7 +32,7 @@ const routes = [{
     {
         path: "/:catchAll(.*)", // 此处需特别注意至于最底部
         redirect: "/404",
-    },
+    },*/
 ]
 const router = createRouter({
     history: createWebHistory(),
