@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
+  base: '/case_site/goodays/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
