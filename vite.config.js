@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+
 import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
-base: '/case_site/Demo_goodays/', // 将打包后的路径设置为相对路径
-  
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
