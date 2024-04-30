@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&amp;family=Noto+Serif+TC:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@700&amp;family=Lusitana&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/index.5cba9dd3.css">
+  <style>/* cyrillic-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+    unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  </style></head>
+
+<body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0"><span id="warning-container"><i data-reactroot=""></i></span>
+    <div class="opacity-0 pointer-events-none transition-all duration-500flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[10000]">
+      <img class="w-32" src="./assets/loading.8ec6f6b1.svg" alt="loading" srcset="">
+    </div>
+    <div class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0">
+      <article class="s1" data-v-667a26ce="">
+        <img src="./assets/leaf.0006bc21.webp" class="leaf" alt="" data-v-667a26ce="">
+        <img src="./assets/box1.74370c3c.webp" class="box1 aos-init aos-animate" alt="" data-aos="fade-down" data-aos-delay="800" data-aos-duration="1600" data-v-667a26ce="">
+        <img src="data:image/webp;base64,UklGRpIMAABXRUJQVlA4WAoAAAAQAAAAMAAAuQIAQUxQSFQAAAANR0AgQJnUAhNMcIGICOHwrFAQAEgCmEPc4D7m2x0R/Vfbtg1jp49CrnAQauODpeCtbRssjCrpzQWd8bPPL9hFnXk6+EWoH5/zH+RXFvEvPb+7zgBWUDggGAwAAJBMAJ0BKjEAugI+nUicSqQkJKMpFcsosBOJZWiwdA+7of7ZfsdftcoBTDcfmgri4Netwah3Tzx4jreZlwg90bppfwv///scmv6DvN9xz/47lH//WJ1Vn//+rb+3FkNKXosPkrjz6qqdzCgi3950FBT6PQeKXw867VlssQDNRYVqAH8k5BE4ka0fqXoBh7OYCEAsVziYeYtuwqG3T7dUSwLbiDfbX/Ws1lZm3NNLsRJMcfq6/HSNYE+MwNz0PnoV2qKET0tJ2A8jqt6CEEYTX2PKQd3/Zg7isqB8GH270Hbk8/bbxgfR/x5xf0wHBgFfy2yjnavKHNqrG37bywSDWnIPY/EM5aMmEcIVgtsmOQB3d6sx+oct2gfvgYbY0b2Rp5sJgUTJQTae6iWo6L62fTAmnwiHnYMdw0fI1bjdjgidLjO8o04oGbKe6bHb7xvWHDORV0JzNSFtpJOtBv0l8Bl0grtb5/yTIoW6Cq+eWOQHut3pjoFhGa13SfUw+TFUGqNY+NEoqxUAmE7TQdNBUsfVkavZsrJXuHiHC7hyNMGebM/jBDPUd1B0OtVCayjEYmHuGPFzGAI1HyqQ4b3KoWTLiWrjobTVOA9gNkF8aSPM/GfBsB81a/yvx5AvUlvoNlEgeX0W8PbY8SsoXO+DpRdtplhSoz1c11GovI1BhiH+mbF0x13+nwxPRxW/L50KkC5FL8PVKku/cIRXZSN9DXvRnl/4pzjWamksOBq9A8+xOFCBSzE2T2uDbX5Q49yo7hsEueIlF87sp+NZ7DVTkjPAEumvn+jN16B+q3k24YeNFY81du1JeJnbdeHH1AD+2+aciQk70/r5VlhKT//IMf4K/6Sbbpm2lfpynN/sZc6QscyJbMBKmQiZ7YYw/vBpNax0FkZv5hDEmP8wmAn0nEXVqYRmEmJRptec+iGlKtSiGONlFWZ/ExkCH9ypLcmLg9BDBeipudFAsTFtLyG+BQmqbYrzIRY+LlAjRp/wDRqcPjwAfKXiATe26z5fD8AzLe7vl16FmISpFVEwLDAjUmjFi/rOiGtq6qxqYjRZGP8Iwde0zQ1q2BSCNHfdJRbuAkTDgtq4klxEsqSHmq0QmiLGsHCC0yxMINvLhjZDDgu+qpQgKgG86g5Eh3jAWBXh2/bmPIgsvLZ42DbSpXt7BWTMD3e1x5ZtVgbJFnQcuxpwticnb0QsuiOEZekNQZIVhesEXPCtss4hyG48J3MqI2QaqFFKy+wngh0o5as/f9sRUAo4vrkXYmtF1qiubiXhwDegxyuHPb5uoed3QZVTR9nD+a9UL5vkKRECOvn8u2LQCyWv3EqfygC3OCww2E0PrCrQze8odZrIWmr1wiAPrX//6CVDlzdo4EJiIBNVEd32Ri9dwYdAg/rB3XJcEpS4ZZ40U8iWJ2rEAdEVI91BINlXG8K40e5pVRhQOvVAhZM82OwOOPafnUJSHa861lCQaWma8Q4qDMpqv+BwSS7S9eL45pZ1Psh49R8l9E2GLFh6phRN9RRjpT80tiG+aVC7t3HWTLHkh4N4PeSYrHdm7kmVY0z9dykyLDv/Rs6M/taq5A6j8zDC/zxNaVZd1zVkAytPppbyGS5e6QQEVDFk8ljybXyhPtiOztWnwGvEXAlMnKvxTUE08QBbKB/2LKp5UWNdQzUy4eLR/WNW0ZDk1uuw84y4O1jxekWS/qvl8BWodXO8KUnsgkb8ojHmabOinaM0CF2darMFRzmGcy7blfkh8AK4SMGNsa/TIsEPfvcWvaiFxiDBAj5c7FtJDJ6FMNbHG8mdj2ry6Xq5hPAiOvHe5ZVo1s/YWQ9nWLcodktOMh7NAyZlBCmq6ibf5pLs8brfXHM6NEKmKMYjaLxAaFU5hk+1oG+fjiwjHZCcmUP5v9mum8ZbD5wRXHUEjO5t25+G5SSdNYSfP4wrc7xNjLBotKi8BOYA/laviK6GLRMQl/+aIn/YhdJ+QbKIvnbwL70uHVmEKWqtjKoAnqxsPrZoi1Pq2El/xryLHB0+wI8Qx+dr8ShuiL6htxZB9d81yGjBVfXHatksDtrlW3HLfr4AKy18TJNNBTAW2xNeGuuqAS9HgoRK8BdEmVVUUzddcTXFXWLQ4HA2JIGH2lc0XGLhSbJqOJme02jScv4seL4V5+2UN2KwJs0n51ycBiZppVax72KQxNAM+Er/5T9hQaIKgGYNbuiLuHO9R7XBxyDd8IlNIIqsXx9BvSJD92mKUFOmhHjOjH3o5hQhranP0EM6xqXbpPm2OgXmPO9TP3DwBAxTfi5oQgUr+LSKVw9tf6Fqq9ryvGwbuV+vRvVWuDqJDSP+UkM+VIPLYKGgaAEQOccvDjbN9OjRCFIRxdiGacD3sObUD8cUmWHAmkdK/UstOgQjWi8/vtyG+TK8VTWGUtBh1xGUUeyyZrnDRv2NivztS/1vDyjYtARin54wzAl0STALj/rD6dvWsf7CgwIIKj9JAGm4o5rsfaRyy3yFxuEBG8+raVaSEptxKkUlpaG2qtv83r1AoVbC8VUUFsx7XnYcXwnIdpyjMJaDG6LeHQvqSSVuZBfUiHe17GgqxVzPHef1cys4yAtFKT9oceACu92PshFelNOuH/5m+UncqzLNSdCGmy6i2fknbk3lskPJpTKzgl5Wm9FijQzmEeVyPW5MslHnVwpAyHYX2pN9v5IIqNqJjSxr83eCyzg8JAbaw5llZK0YV2WGRZE+Dzju2kev1p2mb6qiaZRrABa2HIZo2buDAxyYt+3He4SsjbjA6N8+cWAKPiAmw9C6/p7wts0n3kKzjfLyaK7dyPMX/ponznfqF3Q6z8//qqxOT0ThU2I5Z0djwPa0VjuZx+y5IrN9Vyl1zwsny4J6V1yEGrx6cLEbUOIAUkRa4H1/c+BOcaZQ5sjbmI5Xnql/VjdPrYR+mAgWvDcqv/CxxRAiuU9jJeOGvO5st3E9kNMwjK8KX+3CY2R6eKQA2H8MSvm4/3uVgLpMoeX8blrELy4OGv5oLDuwOSo7nDdL0K7n5Nz4W6gNQVhQnqcYulE+MCEmxFg2vhY18+2K6wGjXSFIL78PFR/o16rlZqyH7RBPzSZZ4gBcXVdy3LWt3nNSWc1SuK+mrKDKMBcvFCCI99pCWHW0iuswJQ0ThBgIFRzdSkj8buA2ufnqjOzHKJoyvcyAB/BB4vSJ/qo9TDRkzi29DnO79APtZW+DpmWKexldFQm2R65T0GsffS0d8Wwf5uLqjJal5BAIfpKO9netFyP73vvKjh12dFkIGMrfYlbUnWeEpcV6gDLAEEai2kSgEqN64TAEY73mrlHexZiDHMU1GKv8zCRayDUmBy+VBfsz0BjfUCeqcNQ0NdRgNddKIfM9uqHwugCXURq5dSx93e+iN/lDwksDDcfN+UIh0BbWLyuSC9mk3gM5OzEltRdEbe5Qx+JSgiFK3nauR8uNRsmtcoxorN3BxhvE1R1GvcmiwUYLEj3fCgqEzBNe/wWz4mTPfZzBdWUsAEgfO0qJW5TJP3NzmJ2zAiwn+F22TlPMnhgrcnaLULtLee8dItggH+CArcALyb40DbhggEm6SeU0G4Ou+LAGxmQUVCDstcKzSlCvsf45emJHVRufTgyzcHS1fiTQyCEXegL0/NrkqNr6N1eaAjtDf1o4AnbYaD9PT+k44TXjOPhMOomWL9LPQvgMJHPf2D2nTAeq14Q0SA/oABb5nI8CmizhlylyzhJB7it+bfFHlQHZ3LgJU1ItEG4AUZrKIDRMQ4nr5tedIxZm3Em8CZ7pIfHf57J//+NBG2t+9TnJv2Lcn65U89vGS76HMqK2OAAQ4VWs74g1s4sS1KHeH+F9gTMgWEWy3uGLhQUFNGvqqjsue1ExVCDnWLQcfF3+czPcsDITa/PMt8TlhmJrm1MJ3gnu5VPYxtXJPOuvOldJCYfK5KwHwn7pappNbvOYr3PvIG1g2uyqbBMSbbscLjR4xcgeoxJcPZg/kNm2NlNRjuto82Vbx8p3hs23PPVo4YB+iNfhWtIxnRCkawUePzRs/xDrtkke/q8b1WjL7bPUQNl7xdTZrlXezZjJhZBDcSUQJ68Y0rWDv2uraCNIPS+YLorpmSWyours5tTT3vqrAk4AAA==" class="box2 aos-init aos-animate" alt="" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1600" data-v-667a26ce="">
+        <img src="./assets/flower2.340a3703.webp" class="flower2 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1600" data-v-667a26ce="">
+        <img src="./assets/building.232fa6cd.webp" class="building" alt="" data-v-667a26ce="">
+        <div class="txt" data-v-667a26ce="">
+          <img src="./assets/logo.7f3e248c.svg" class="logo aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1600" data-v-667a26ce="">
+          <img src="./assets/t1.8d4b6b49.svg" class="t1 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1600" data-v-667a26ce="">
+          <img src="./assets/t2.21322821.svg" class="t2 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1600" data-v-667a26ce="">
+        </div></article><article class="s2">
+          <img src="./assets/flower1.1289559f.webp" class="flower1 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="1200" data-aos-duration="1600">
+          <img src="./assets/flower2.340a3703.webp" class="flower2 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1600">
+          <div class="view">
+            <div class="viewbox">
+              <img class="view1" src="./assets/map.0b851a09.jpg" alt="" srcset="" style="transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-property: transform; transition-duration: 0ms; transform: translateX(-7.28477px) translateY(0px) translateZ(1px); pointer-events: auto;">
+              <div class="mask1">
+                <img src="data:image/png;base64,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" alt="" srcset="">
+              </div>
+            </div>
+          </div>
+          <div class="t">
+            <h3 class="t1 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1300">五股豐收之境 都心熟成之地</h3>
+            <h4 class="t2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1300">市心珍藏 千坪美玉 成泰繁華 大隱森境 </h4>
+            <div class="t3 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1500">
+              <span>五股精華市區</span>成泰路商圈機能豐美，水碓社區、德音生活圈，在地隱富聚落，因倚公園而享「小陽明山」美譽，為五股人文與景觀兼具的成熟美地。 
+              <div class="hr"></div>
+              <span>新北交通樞紐</span>新北重量級動力軸線，車程約4分鐘上五股交流道；台64、65線縱橫大台北連接雙高，近距新莊副都心繁榮共享，桃園機場、松山機場約20分鐘可達。 </div>
+              <div class="b">
+                <img src="./assets/t1.df7112d6.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300" class="aos-init aos-animate">
+                <img src="./assets/t2.69ec3f9b.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300" class="aos-init aos-animate">
+                <img src="./assets/t3.0d6a1b9c.png" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300" class="aos-init aos-animate">
+              </div>
+            </div>
+          </article>
+          <article class="s3">
+            <img src="./assets/flower1.1289559f.webp" class="flower1 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1600">
+            <img src="./assets/flower2.340a3703.webp" class="flower2 aos-init aos-animate" alt="" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1600">
+            <img src="./assets/en.b52b599b.svg" class="en">
+            <div class="view">
+              <div class="viewbox">
+                <img class="view1" src="./assets/map.b2b0270e.webp" alt="" srcset="" style="transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-property: transform; transition-duration: 0ms; transform: translateX(0px) translateY(0px) translateZ(1px); pointer-events: auto;">
+                <div class="mask2"><img src="data:image/png;base64,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" alt="" srcset=""></div></div></div><div class="t"><div class="t1 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1300">繁華映綠 文教馥域</div></div></article><article class="s4"><img src="./assets/t.2d49d3c3.png" class="t aos-init aos-animate" data-aos="fade-up"><div class="box"><img src="./assets/en.b89d7622.svg" class="en"><div class="slider aos-init aos-animate" data-aos="fade"><div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events slide"><div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-4052.13px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.b8074a42.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.769a93c0.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.2c26390d.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.6c90b833.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev swiper-slide-duplicate slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.b926e7ed.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-duplicate slide-item" data-swiper-slide-index="5" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/6.3549bfb4.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next swiper-slide-duplicate slide-item" data-swiper-slide-index="6" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/7.b7b13858.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="7" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/8.351f91ce.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="8" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/9.ef08eaa7.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.b8074a42.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.769a93c0.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.2c26390d.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.6c90b833.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-prev slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.b926e7ed.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-active slide-item" data-swiper-slide-index="5" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/6.3549bfb4.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-next slide-item" data-swiper-slide-index="6" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/7.b7b13858.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="7" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/8.351f91ce.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide slide-item" data-swiper-slide-index="8" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/9.ef08eaa7.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.b8074a42.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.769a93c0.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.2c26390d.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.6c90b833.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev swiper-slide-duplicate slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.b926e7ed.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-duplicate slide-item" data-swiper-slide-index="5" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/6.3549bfb4.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next swiper-slide-duplicate slide-item" data-swiper-slide-index="6" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/7.b7b13858.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="7" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/8.351f91ce.jpg" alt=""><span class="caption"></span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="8" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/9.ef08eaa7.jpg" alt=""><span class="caption"></span></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div><!----><div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div></div></div></div></article><article class="s5"><div class="splide slide splide--loop splide--ltr splide--draggable is-active is-initialized" id="splide01" role="region" aria-roledescription="carousel"><div class="splide__track splide__track--loop splide__track--ltr splide__track--draggable" id="splide01-track" style="padding-left: 0px; padding-right: 0px;" aria-live="polite" aria-atomic="true"><ul class="splide__list" id="splide01-list" role="presentation" style="transform: translateX(-1422.66px);"><li class="splide__slide slide-item splide__slide--clone" id="splide01-clone01" role="group" aria-roledescription="slide" aria-label="3 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/3.b15cdde6.webp" alt="B4"><a href="https://yun.kujiale.com/design/3FO3OU5TTJ96/airoaming" target=" _blank" class="vr" tabindex="-1"><b>B4</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item splide__slide--clone is-prev" id="splide01-clone02" role="group" aria-roledescription="slide" aria-label="4 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/4.07e689d8.webp" alt="C1"><a href="https://yun.kujiale.com/design/3FO3OSE4054I/airoaming" target=" _blank" class="vr" tabindex="-1"><b>C1</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item is-active is-visible" id="splide01-slide01" role="group" aria-roledescription="slide" aria-label="1 of 4" style="margin-right: 10px; width: calc(100% + 0px);"><img src="https://test-two.h35.tw/assets/1.ba6865e5.webp" alt="B2"><a href="https://yun.kujiale.com/design/3FO3OSS0JJYJ/airoaming" target=" _blank" class="vr"><b>B2</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item is-next" id="splide01-slide02" role="group" aria-roledescription="slide" aria-label="2 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/2.8baee554.webp" alt="C4"><a href="https://yun.kujiale.com/design/3FO3OTKP1CLL/airoaming" target=" _blank" class="vr" tabindex="-1"><b>C4</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item" id="splide01-slide03" role="group" aria-roledescription="slide" aria-label="3 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/3.b15cdde6.webp" alt="B4"><a href="https://yun.kujiale.com/design/3FO3OU5TTJ96/airoaming" target=" _blank" class="vr" tabindex="-1"><b>B4</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item" id="splide01-slide04" role="group" aria-roledescription="slide" aria-label="4 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/4.07e689d8.webp" alt="C1"><a href="https://yun.kujiale.com/design/3FO3OSE4054I/airoaming" target=" _blank" class="vr" tabindex="-1"><b>C1</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item splide__slide--clone is-active" id="splide01-clone03" role="group" aria-roledescription="slide" aria-label="1 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/1.ba6865e5.webp" alt="B2"><a href="https://yun.kujiale.com/design/3FO3OSS0JJYJ/airoaming" target=" _blank" class="vr" tabindex="-1"><b>B2</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li><li class="splide__slide slide-item splide__slide--clone" id="splide01-clone04" role="group" aria-roledescription="slide" aria-label="2 of 4" style="margin-right: 10px; width: calc(100% + 0px);" aria-hidden="true"><img src="https://test-two.h35.tw/assets/2.8baee554.webp" alt="C4"><a href="https://yun.kujiale.com/design/3FO3OTKP1CLL/airoaming" target=" _blank" class="vr" tabindex="-1"><b>C4</b>樣品屋<span><img src="./assets/a.6cb58743.svg" alt="" srcset="">請點擊VR實境看房</span></a></li></ul></div></div><div class="slide-box"><div class="me"><span class="m1 active">2房</span><span class="m2">3房</span></div><div class="list type1"><h3>現代2房，舒適生活</h3><img src="./assets/1.f6c8501f.png" class="img" alt="" srcset=""><!----><div class="bottom_me"><h4 class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"></polyline></svg><span>B2</span>/25.73坪</h4><h4 class=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 27"><polyline points=".5 .5 40.5 25.5 80.5 .5"></polyline></svg><span>C4</span>/26.51坪</h4></div><img src="data:image/webp;base64,UklGRgwJAABXRUJQVlA4WAoAAAAQAAAAOQQAFwAAQUxQSDsAAAAJDzD/ERGCTSRbkT4hKRKoJ4QbnjRCnua9HGxE/5fB2TcpUhAIqn2blrDhrxMfpwMGfpoiBb1O9g/BAABWUDggqggAABA7AJ0BKjoEGAA+nUSdSiwmpCOqN9qQsBOJZWgpy1j/Ob5Jvya/sQab/MsgER7xrerrgZxP2L73ambeK95f1HtZ7av8HzeLG/Ft26P/abm7+SjkZrv/z1f/y4d8J5/PfBl4GgEaQ9Ddn9EQ7mXkJp8laoUYOyF8TriZyOlo/cB8JKRSvTRMVQMjuhV16tGSIOUEI/Fd5M1R/7nvIJGwJmno6KNabIskh0AR2i8X5pdBaFqkRXsK1hEmAIannxpgtAB8xMe2a99MF//z8TXyDTbm3LWT7RVlYQtMS76lhj9jy8+bYM1kxC1CyF1Vu9l4DZ4Luxq6V+aFsyEatjmtIraKqAcRGzOqT6BqvH5WdWXVQfH4BBquVtztls47chCYQjoqROWJJqzzy6VFmCehuFpQDpeRrHgrW0QMdup7WwVUlSZzyOtR0JqxN7NtQDywNJB0kMLWoaMNWM6iiw/aJennPAK7l9D4d1zypXAmFr4V9oDO3aTmZrXNn1S6rXJcxIGhsC2gpinjMNw0e4mEwS8sYJfBbUazC57njycZjJbSRqOSB7FMxFFCWQdUgxxjbOoLu7DfhnyTcE05EdaG5HsjmksRSWOchvTvVyuqL6/+E10Nnm+WtBwW4ridUEzEFgAA/s+YUfco+MrO1Z3KzZWKj/8gx/gr/K1jwtCemby9wZbd2y0BHbNcAG/wMUVw+loXRnAWhjpXtoyOBnNdcyT7gbpOFJTV/kgjS94GRw1uIVC3OHTgczm/QIllkkNTUN642PKkYEl5wm0mVoC5LctUDqI6YKEmQSn5+6VE5zhQVM7w+8Me1rtgnEpKGVGFGzeLKfS2AgApyMRc9dWsBvJaazt8W/o9OYv1dLiBL5Lne6X/AY9RKJJJQlib6hl3W+ZEx+bZRyynJtiH8xxwBiuFXN53u7ArInPMD8VnVTNeqPKhBb0YaF/QZNaSOoFfaNGQsrS74XFyRn091jxM7ITv2t4mT8oedbAnoR2V8jchNzfUODhTM3JBnoakr61LzA802q0fBSL0rkOCNS/yPmd5lrGQ2BwQeh/H5VpOmmLbpBYU280Yqkhtpa/s0t7xOE2MPh3qm0OzpLANKdApGRtJq0htyVa9uVlWizP25I2XYbDrboJaVsl2i6qIms624fCh5YJtioLBPiYr71DmEeDYLbkR1nFKkZiok9DQnK+fc5bB/uhejRARqwk1ZEqVGzLGSLYNkicF3xbg96Sb2bHLyec2E8hROBdAZncsvcIRaGICnkoQLQTBcaBhr7xord4nqGB5hg8klE/veq4QqYPXY8Dyq0cIcXcdHL9pklrmh9WaRznHGtBoiTj1/Giciy4s3A7ytjF1ROjc/qvLE8ku/nOhjUhvXeGR5M+VCPvMY8H3FJWqLpq51dh3wuXV77ozgPtD5IX0LlRoeOnsZ9NGN0r9sAiVvwjy0FgZoYK0Wd6GPq729P9lVdDnHKs/fdswybDct3hGf685ZJ/BoM8zkBJXbeURuFydWb74EP5DQybzf1h3V8w0YlZtS8VO18aPV6RjIUFGNL1f7h/10qz1L4uE6BcXaY8sMrlGnTmn14UkVL81w+Z5ja2S+9HmTLeJA1oDCKpxhzkTa7Vpmg3sxjJZbLEDGm1MKRD4eBdz2feeqFo10Ah6d0qQmoQNLRccUex3VwYOC8z1BQhPloiqut0v31zvh9ANMx/ar0fXRZ0h2bocpf5xs8x93g6T9jeCRe+yg7oQHBB0fAosyh2QNIW9XVSY8hjQH20Ys+J5i/nebclzjoBGBdJw6TuJz+0A2Zc8AytXK4yZ8QcE5u2DzB7uYF0bJISthmD1IAu/iNaddx8UVJRV5uNEF6WPy7ZKpmSrQ+XWKb8SrUF0iMj2v/81psA/XRqg5y1ZZP5u1rXkZbZzdcpxjk1iANu+AwfW8NKTWRFB+rOFFQzaGp/EndP5RLiiGv03VQiqbX+zO5Ldu/nAe+C0+EGpMyb+U1+x0yIK0RdtI/yJ5X+4JR4fHX0XXN/p2YPOT8/EZOioIAehNGtZkmKFpL3aBtYVUcxuzQpqNU43Xp7GkdmMLgBbAALM3m2JBEEqhaNuHwyw1lymUHAxiWSakFEOgmZVYEnDqObUR1HAK3/OkTk9U8f7QS3VLIjHPJv3NnyrpJvnJhOmO9+73WHTNPLJDaqvW+eUhK98Sp8/rygsFxIITxnSCXbDuwJbo/L32lfPzLnLAJXy94V9SYkFNksJDzaSUzI79JIyOqbpiOP2apNMLQsPqN3kbJU+E+7WIQLA7QrY6jS7oECf+uvOD4lPOUrh+gQ0GqSD31fhCsYlBvVXD3xGdpiDBBA3pWRaqy3FmIt/WDP4WQmRnbaxffY0VBkEBV6+0WeN3dZ4TkIlRvRKNvPW3uyf6M55Ajp5q+zPht/PliZCraehzVNtulwBxmcikz/SoF2n9r3u8OjQhzDI/ziTF/dLh7Avgcpn3gZ5CPYzK2DCjLwbd7mnLagQz3LHNse27+WwO3kwUcBX/dZQf0fhp34YO7ca5BB2Ey3LwJwZ0Lw+7SI3e7gee0ivAt47sP27+Fnf3s1lbbeafkanQ5wFkkbtttRn9CjmvFFtzqr+o5xcJB/VeI+10qHSwsm3ORGsBEIAUMEAdMVHyiaVxPwU/CwiHywnp1xC+5dz3vnuWnANzEGov4kwkCQn9fSyWBfCrvgMcL6aekgOEYa3dymNeV9uvHxiSDqYFMRhcEFwuDd6hpWGA81aZTEBxuPlDP7vMy4IwvQJKOHSiySAXDYzHRU/XYd19Cg+9rXocHp7ZM2OXJMFycQaiTxyVUytwXiuXOP/VTxMBt+NWUsSzzKhNNzlz5IlMoIWjTyZRdSnggix2TcNtWhhrJzcUarRbdCUGrlrygzT2bcWHSPBxJOStvRXOieOl4EUyPo1hWsAX+qXMzkWpqxL5n9pa3hwEyxat4WJ0tYAAAA=" class="bottom" alt="" srcset=""></div><!----></div></article><article class="s6"><div class="flower1 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"><img src="./assets/flower1.1289559f.webp" alt=""></div><div class="flower2 aos-init" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"><img src="./assets/flower2.340a3703.webp" alt=""></div><div class="slider aos-init" data-aos="fade"><div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events slide swiper-backface-hidden"><div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2356.73px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next swiper-slide-duplicate slide-item" data-swiper-slide-index="2" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/3.8089d7b2.jpg" alt="青鳥宅配專區"><div class="caption">青鳥宅配專區</div></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate slide-item" data-swiper-slide-index="3" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/4.7c93876f.jpg" alt="聚會議閱讀區"><div class="caption">聚會議閱讀區</div></div><div class="swiper-slide swiper-slide-prev slide-item" data-swiper-slide-index="0" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/1.af8e50bf.jpg" alt="和風迎賓大廳"><div class="caption">和風迎賓大廳</div></div><div class="swiper-slide swiper-slide-active slide-item" data-swiper-slide-index="1" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/2.cec6e0ac.jpg" alt="敘咖啡交誼廳"><div class="caption">敘咖啡交誼廳</div></div><div class="swiper-slide swiper-slide-next slide-item" data-swiper-slide-index="2" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/3.8089d7b2.jpg" alt="青鳥宅配專區"><div class="caption">青鳥宅配專區</div></div><div class="swiper-slide slide-item" data-swiper-slide-index="3" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/4.7c93876f.jpg" alt="聚會議閱讀區"><div class="caption">聚會議閱讀區</div></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev swiper-slide-duplicate slide-item" data-swiper-slide-index="0" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/1.af8e50bf.jpg" alt="和風迎賓大廳"><div class="caption">和風迎賓大廳</div></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-duplicate slide-item" data-swiper-slide-index="1" style="width: 786.923px; margin-right: 40px;"><img src="https://test-two.h35.tw/assets/2.cec6e0ac.jpg" alt="敘咖啡交誼廳"><div class="caption">敘咖啡交誼廳</div></div></div><!----><!----><div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div></div></div></article><article class="s7"><div class="slider aos-init" data-aos="fade"><div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events slide"><div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2949.17px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.523a0ae4.jpg" alt="四季森悅廊道"><span class="caption">四季森悅廊道</span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.a6b63a5b.jpg" alt="圓滿活動廣場"><span class="caption">圓滿活動廣場</span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.75168565.jpg" alt="逸樂散步小徑  "><span class="caption">逸樂散步小徑  </span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.e6e00cab.jpg" alt="頑童遊戲沙坑"><span class="caption">頑童遊戲沙坑</span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev swiper-slide-duplicate slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.e34108b4.jpg" alt="光合體適能區"><span class="caption">光合體適能區</span></div><div class="swiper-slide swiper-slide-duplicate-active slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.523a0ae4.jpg" alt="四季森悅廊道"><span class="caption">四季森悅廊道</span></div><div class="swiper-slide swiper-slide-duplicate-next slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.a6b63a5b.jpg" alt="圓滿活動廣場"><span class="caption">圓滿活動廣場</span></div><div class="swiper-slide slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.75168565.jpg" alt="逸樂散步小徑  "><span class="caption">逸樂散步小徑  </span></div><div class="swiper-slide slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.e6e00cab.jpg" alt="頑童遊戲沙坑"><span class="caption">頑童遊戲沙坑</span></div><div class="swiper-slide swiper-slide-prev slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.e34108b4.jpg" alt="光合體適能區"><span class="caption">光合體適能區</span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-active swiper-slide-duplicate slide-item" data-swiper-slide-index="0" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/1.523a0ae4.jpg" alt="四季森悅廊道"><span class="caption">四季森悅廊道</span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate slide-item" data-swiper-slide-index="1" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/2.a6b63a5b.jpg" alt="圓滿活動廣場"><span class="caption">圓滿活動廣場</span></div><div class="swiper-slide swiper-slide-duplicate slide-item" data-swiper-slide-index="2" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/3.75168565.jpg" alt="逸樂散步小徑  "><span class="caption">逸樂散步小徑  </span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate slide-item" data-swiper-slide-index="3" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/4.e6e00cab.jpg" alt="頑童遊戲沙坑"><span class="caption">頑童遊戲沙坑</span></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev swiper-slide-duplicate slide-item" data-swiper-slide-index="4" style="margin-right: 10px;"><img src="https://test-two.h35.tw/assets/5.e34108b4.jpg" alt="光合體適能區"><span class="caption">光合體適能區</span></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div><!----><div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div></div></div></article><div class="bg89"><article class="s8"><div class="t"><div class="t1 aos-init" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1300">精品風格 上質美學</div><img src="./assets/logos.bd0490bc.png" alt="" class="logos aos-init" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1300"><img src="./assets/en.9cb938e0.svg" alt="" class="en aos-init" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1300"></div></article><article class="s9"><div class="t"><div class="t1 aos-init" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1300">合登建設 幸福建築推手</div><div class="t2 aos-init" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1300">合登建設系出合康建築團隊，從專業建築師的務實理性出發，以居住者角度思考，掌握當代生活趨勢，不論地點、社區規模，只為了完成每塊土地所賦予的使命，贏得每一位購屋者微笑的肯定！ </div></div><div class="list flex"><span data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1300" class="aos-init"><img src="./assets/1.b4bdc089.png" alt=""></span><span data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1300" class="aos-init"><img src="./assets/2.4650880a.png" alt=""></span><span data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1300" class="aos-init"><img src="./assets/3.2496cc2b.png" alt=""></span></div><img src="./assets/en.6f09715f.svg" alt="" class="en aos-init" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1300"><input type="checkbox" id="s9-modal" class="modal-toggle"><div class="modal boxbg"><label for="s9-modal" class="mbg"></label><div class="s9-box"><label for="s9-modal" class="btn absolute">✕</label><!----><!----><!----></div></div></article></div><article class="s10" data-v-764b9478=""><div class="box2" data-v-764b9478=""><img src="data:image/webp;base64,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" alt="" data-aos="fade" data-aos-delay="0" data-aos-duration="1600" data-v-764b9478="" class="aos-init"></div><img src="./assets/flower1.1289559f.webp" class="flower1 aos-init" alt="" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1600" data-v-764b9478=""><img src="./assets/flower2.340a3703.webp" class="flower2 aos-init" alt="" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1600" data-v-764b9478=""><img src="./assets/flower2.340a3703.webp" class="flower3 aos-init" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600" data-v-764b9478=""><img src="./assets/building.232fa6cd.webp" class="building" alt="" data-v-764b9478=""><div class="txt" data-v-764b9478=""><img src="./assets/logo.7f3e248c.svg" class="logo aos-init" alt="" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1600" data-v-764b9478=""><div class="t1 aos-init" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1600" data-v-764b9478="">｜千坪美玉｜景觀2-3房｜</div></div></article><div class="mo-contact-info"><a class="flex flex-col contact-item justify-center items-center"><img src="./assets/phone.2cab7e5d.svg" alt="貴賓專線" srcset=""><div>貴賓專線</div></a><div class="flex flex-col contact-item justify-center items-center"><img src="./assets/pen.f0b8e19b.svg" alt="立即預約" srcset=""><div>立即預約</div></div><a class="flex flex-col contact-item justify-center items-center" href="https://www.facebook.com/61553991285623" target="_blank"><img src="./assets/fb.91842097.svg" alt="粉絲專頁" srcset=""><div>粉絲專頁</div></a><a class="flex flex-col contact-item justify-center items-center" href="https://lin.ee/4Az6cpy" target="_blank"><img src="./assets/line.c8dd93f5.svg" alt="Line" srcset=""><div>LINE</div></a></div><input type="checkbox" id="contact-modal" class="modal-toggle"><div class="modal -mt-20 md:-mt-72"><label for="contact-modal" class="modal-bg"></label><div class="modal-box py-12 relative flex flex-col items-center justify-center"><label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label><!----><div class="text-xl mt-4 font-bold"></div><div class="text-md mt-4"></div><div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2"></div></div></div><div id="order" class="relative text-center"><div class="order"><div class="order-section"><div class="order-title text-center relative z-10">預約表單</div><div class="form mx-auto relative flex justify-center justify-between items-center z-10"><div class="row2"><div class="row1"><label class="row"><input type="text" placeholder="請輸入您的姓名" class="input w-full rounded-none"></label><div class="sex"><label><input type="radio" name="sex" value="male">先生</label><label><input type="radio" name="sex" value="female">女士</label></div></div><label class="row"><input type="text" placeholder="請輸入您的手機號碼" class="input w-full rounded-none"></label></div><label class="row"><input type="text" placeholder="請輸入您的E-mail" class="input w-full rounded-none"></label><!----><div class="flex gap-2 control flex-col relative z-10"><p class="text-[#fff]"><input type="checkbox" class="bg-white rounded-md"> 本人知悉並同意<label for="policy-modal" class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容 </p><p class="text-[#fff] text-left"> 您所登錄的個人資料將作為以下用途<br> (一)本網站所載之相關事項通知<br> (二)客戶管理與服務<br> (三)本公司行銷業務之推廣</p></div><div class="send mt-2 mx-auto hover:scale-90 btn cursor-pointer relative z-10">即刻預約</div></div></div><div class="house"><img src="./assets/flower1.1289559f.webp" class="flower1 aos-init" alt="" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1600"><div class="relative flex h-full flex-col md:flex-row items-center justify-between z-10"><div class="flex-1 items-center justify-center"><div class="h-full info-box mx-auto flex flex-col items-center justify-center"><div class="title font-['Noto_Serif_TC']">建案資訊<img src="data:image/webp;base64,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" alt=""></div><div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2"><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">投資建設</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">合登建設</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">坪數規劃</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">20~36坪</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">接待會館</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">新北市五股區成泰路一段205號</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">基地位置</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">新北市五股區成泰路一段與成泰路一段189巷交叉口</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">規劃型態</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">電梯大樓</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">建案類別</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">預售屋（建構中）</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">土地分區</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">住宅區</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">基地面積</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">1350坪</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">棟別戶數</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">3幢，4棟，183戶住家</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">樓層規劃</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">地上9層，地下3層</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">格局規劃</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">二房(20~28坪)、三房(27~36坪)</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">車位規劃</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">地下室坡道平面車位 200個、有充電設備（含預留）</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">公共設施</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">接待大廳、中庭花園、交誼廳、會議室、閱覽室、健身房、親子遊戲區、兒童遊戲區</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">結構工程</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">RC鋼筋混凝土</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">建造執照</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">111股建字第00342號</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">投資興建</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">合登建設股份有限公司</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">營造公司</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">洛城營造有限公司</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">建築設計</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">閤康聯合建築師事務所</p></div><div class="item font-bold flex items-center w-full whitespace-nowrap"><p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]">企劃銷售</p><p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal">翰永興業</p></div></div></div></div></div></div></div><div class="gmap relative z-10"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14454.920536892649!2d121.4351805!3d25.0771343!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a76c468f4f33%3A0xaf99707120ba2c10!2z5oiQ5rOw576OIOaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1713332905481!5m2!1szh-TW!2stw" frameborder="0"></iframe></div><input type="checkbox" id="policy-modal" class="modal-toggle"><div class="modal"><label for="policy-modal" class="btn btn-sm btn-circle absolute right-4 top-4 z-30">✕</label><div class="modal-box w-11/12 max-w-5xl text-left text-[#000]"><div class="text-3xl font-bold">個資告知事項聲明</div><h3 class="text-lg py-4"> 非常歡迎您光臨「合登成泰美網站」（以下簡稱本網站），為了讓您能夠安心使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容： </h3><div class="py-4"><h3 class="font-bold">一、隱私權保護政策的適用範圍</h3><p> 隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。 </p><h3 class="mt-4 font-bold">二、個人資料的蒐集、處理及利用方式</h3><ul class="mt-4 list-disc pl-8"><li> 當您造訪本網站或使用本網站所提供之功能服務時， 我們將視該服務功能性質，請您提供必要的個人資料， 並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意， 本網站不會將個人資料用於其他用途。 </li><li> 本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。 </li><li> 於一般瀏覽時，伺服器會自行記錄相關行徑， 包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。 </li><li> 為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。 </li></ul><h3 class="mt-4 font-bold">三、資料之保護</h3><ul class="mt-4 list-disc pl-8"><li> 本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施， 加以保護網站及您的個人資料採用嚴格的保護措施， 只由經過授權的人員才能接觸您的個人資料， 相關處理人員皆簽有保密合約，如有違反保密義務者， 將會受到相關的法律處分。 </li><li> 如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。 </li></ul><h3 class="mt-4 font-bold">四、網站對外的相關連結</h3><p> 本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。 </p><h3 class="mt-4 font-bold">五、與第三人共用個人資料之政策</h3><p> 本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。 </p><p class="mt-4">前項但書之情形包括不限於：</p><ul class="mt-4 list-disc pl-8list-disc pl-8"><li>經由您書面同意。</li><li>法律明文規定。</li><li>為免除您生命、身體、自由或財產上之危險。</li><li> 與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集著依其揭露方式無從識別特定之當事人。 </li><li> 當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。 </li><li>有利於您的權益。</li><li> 本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。 </li></ul><h3 class="mt-4 font-bold">六、Cookie之使用</h3><p> 為了提供您最佳的服務， 本網站會在您的電腦中放置並取用我們的Cookie， 若您不願接受Cookie的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕Cookie的寫入，但可能會導至網站某些功能無法正常執行 。 </p><h3 class="mt-4 font-bold">七、隱私權保護政策之修正</h3><p> 本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。 </p></div><div class="modal-action"><label for="policy-modal" class="btn">關閉</label></div></div></div>
+        <div class="footer flex items-center justify-center w-full h-[40px] bg-[#1D3736] text-[#FFF]"> 合登建設 成泰美copyright </div>
+        
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793" integrity="sha512-FIKRFRxgD20moAo96hkZQy/5QojZDAbyx0mQ17jEGHCJc/vi0G2HXLtofwD7Q3NmivvP9at5EVgbRqOaOQb+Rg==" data-cf-beacon="{&quot;rayId&quot;:&quot;87c6228b8ff22aac&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;2ebc1b649da6442088fbd2ee50953f81&quot;}" crossorigin="anonymous"></script>
+  
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-000000"></script><div><div><div class="Vue-Toastification__container top-left"></div></div><div><div class="Vue-Toastification__container top-center"></div></div><div><div class="Vue-Toastification__container top-right"></div></div><div><div class="Vue-Toastification__container bottom-left"></div></div><div><div class="Vue-Toastification__container bottom-center"></div></div><div><div class="Vue-Toastification__container bottom-right"></div></div></div></body>
+
+</html>

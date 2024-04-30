@@ -5,7 +5,8 @@ import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
-  base: './', // 将打包后的路径设置为相对路径
+base: '/case_site/Demo_goodays/', // 将打包后的路径设置为相对路径
+  
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -46,7 +47,7 @@ export default defineConfig({
       },
     }),
   ],
-  server: {
-    host: '0.0.0.0'
-  }
+    server: {
+        host: '0.0.0.0'
+    }
 })
