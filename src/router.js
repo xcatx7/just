@@ -5,6 +5,7 @@ const routes = [{
     name: "Home",
     component: Home,
 },
+/*
 {
     path: "/case_site/goodays/formThanks",
     name: "formThanks",
@@ -33,7 +34,7 @@ const routes = [{
     {
         path: "/case_site/goodays/:catchAll(.*)", // 此处需特别注意至于最底部
         redirect: "/404",
-    },
+    },*/
 ]
 const router = createRouter({
     history: createWebHistory(),

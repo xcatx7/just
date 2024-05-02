@@ -1,101 +1,57 @@
 <template>
-  <div id="order" class="relative text-center">
-    <div class="order">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center relative z-10">
         {{ info.order.title }}
       </div>
-      <div class="form mx-auto relative flex justify-center justify-between items-center z-10">
-          <div class="row2">
+      <div class="form mx-auto relative flex justify-center">
+        <div class="row2">
           <div class="row1">
-          <label class="row">
-            <input
-              type="text" name="name"
-              placeholder="請輸入您的姓名"
-              class="input w-full rounded-none"
-              :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)"
-          /></label>
-          
-          <div class="sex">
-          <label><input  type="radio" name="sex" value="male"
-              @input="(event) => (formData.sex = event.target.value)">先生</label>
-          <label><input  type="radio" name="sex" value="female"
-              @input="(event) => (formData.sex = event.target.value)">女士</label>
+            <label class="row"><span>姓名<span>(必填)</span></span>
+            <input 
+              type="text" name="name" placeholder="請輸入您的姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" 
+            /></label>
+            <div class="sex">
+              <label><input  type="radio" name="sex" value="male" @input="(event) => (formData.sex = event.target.value)">先生</label>
+              <label><input  type="radio" name="sex" value="female" @input="(event) => (formData.sex = event.target.value)">女士</label>
+            </div>
+          </div>
+          <label class="row"><span>手機<span>(必填)</span></span>
+            <input type="text" name="phone" placeholder="請輸入您的手機號碼" class="input w-full rounded-none" :value="formData.phone"
+            @input="(event) => (formData.phone = event.target.value)" /></label>
         </div>
-        </div>
-          <label class="row">
-            <input
-              type="text" name="phone"
-              placeholder="請輸入您的手機號碼"
-              class="input w-full rounded-none"
-              :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)"
-          /></label></div>
-          <label class="row"
-            >
-            <input
-              type="text" name="email"
-              placeholder="請輸入您的E-mail"
-              class="input w-full rounded-none"
-              :value="formData.email"
-              @input="(event) => (formData.email = event.target.value)"
-          /></label>
-          <label class="row" v-if="info.ctime"
-            >
-            <select
-              class="select w-full rounded-none"
-              v-model="formData.ctime" name="ctime"
-            ><option value="" selected disabled>方便連絡時段</option>
-              <option
-                v-for="ctime in info.ctime"
-                :value="ctime"
-                v-text="ctime"
-              ></option>
-            </select>
+        <label class="row"><span>E-mail</span>
+          <input type="text" name="email" placeholder="請輸入您的E-mail" class="input w-full rounded-none" :value="formData.email"
+          @input="(event) => (formData.email = event.target.value)" /></label>
+        <label class="row" v-if="info.ctime"><span>方便連絡時段</span>
+          <select class="select w-full rounded-none bg-white" v-model="formData.ctime"  name="ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select>
           </label>
+        <!-- Policy -->
+        <div class="flex gap-2 items-center justify-center control">
+          <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+            class="checkbox bg-white rounded-md" />
+          <p class="text-[#fff]">
+            本人知悉並同意<label for="policy-modal"
+              class="modal-button text-[#ff0] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          </p>
+        </div>
 
-      <!-- Policy -->
-      <div class="flex gap-2 control flex-col relative z-10">
-        <p class="text-[#fff]">
-        <input
-          type="checkbox"
-          v-model="formData.policyChecked"
-          :checked="formData.policyChecked"
-          class="bg-white rounded-md"
-        />
-          本人知悉並同意<label
-            for="policy-modal"
-            class="modal-button text-[#ff0] cursor-pointer hover:opacity-70"
-            >「個資告知事項聲明」</label
-          >內容
-        </p>
-        <p class="text-[#fff] text-left">
-        您所登錄的個人資料將作為以下用途<br>
-(一)本網站所載之相關事項通知<br>
-(二)客戶管理與服務<br>
-(三)本公司行銷業務之推廣</p>
+        <!-- Send -->
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+          {{ sending? '發送中..': '確認送出' }}
+        </div>
       </div>
-      <!-- Send -->
-      <div
-        class="send mt-2 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
-        @click="send()"
-      >
-        {{ sending ? "發送中.." : "即刻預約" }}
-      </div>
-
-      </div>
-
     </div>
-
-
-    <!-- HouseInfo -->
-    <HouseInfo />
-  </div>
+<!-- HouseInfo -->
+<HouseInfo />
     <!-- Map -->
     <Map v-if="info.address" />
-    
+
     <Policy />
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#1D3736] text-[#FFF]">
         合登建設 成泰美copyright
@@ -317,12 +273,10 @@
 import Policy from "@/section/form/policy.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
-
 import info from "@/info"
-
-// import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive } from "vue"
-// import { VueRecaptcha } from "vue-recaptcha"
+import { cityList, renderAreaList } from "@/info/address.js"
+import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
@@ -335,9 +289,8 @@ const formData = reactive({
   phone: "",
   email: "",
   ctime: "",
-//  msg: "",
   policyChecked: false,
-  //: true,
+  r_verify: true,
 })
 
 //非必填
@@ -345,7 +298,6 @@ const bypass = [
   "sex",
   "email",
   "ctime",
-  "r_verify",
 //  "msg",
 ]
 
@@ -356,18 +308,31 @@ const formDataRef = ref([
   "手機", //phone
   "信箱", //email
   "聯絡時段", //ctime
-  //"備註訊息", //msg
   "個資告知事項聲明", //policyChecked
-  //"機器人驗證", //r_verify
 ])
 
 const areaList = ref([])
+
+watch(
+  () => formData.city,
+  (newVal, oldVal) => {
+    areaList.value = renderAreaList(newVal)
+    formData.area = areaList.value[0].value
+  }
+)
+
+const onRecaptchaVerify = () => {
+  formData.r_verify = true
+}
+const onRecaptchaUnVerify = () => {
+  formData.r_verify = false
+}
+
 const send = () => {
 
-  const presend = new FormData()
+  const presend = new FormData();
   let pass = true
   let unfill = []
-  
   let idx = 0
 
   //驗證
@@ -376,13 +341,13 @@ const send = () => {
       if (value == "" || value == false) {
         unfill.push(formDataRef.value[idx])
       }
+
     }
 
-    idx++
+    idx++;
 
-    presend.append(key, value)
+    presend.append(key, value);
   }
-
 
   //有未填寫
   if (unfill.length > 0) {
@@ -398,19 +363,22 @@ const send = () => {
     toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
     return
   }
+
   if (pass && !sending.value) {
     sending.value = true
-//送至表單PHP
+
     fetch("wsform.php", {
       method: "POST",
       body: presend,
     }).then((response) => {
-      sending.value = false;      
       if (response.status === 200) {
         window.location.href = "https://hc-nice.com/case_site/goodays/thank.php"
       }
-    })
-    // 
+      sending.value = false
+    });
+
+
+    // toast.success(`表單已送出，感謝您的填寫`)
   }
 }
 </script>

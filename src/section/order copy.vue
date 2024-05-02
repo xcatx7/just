@@ -449,7 +449,7 @@ const send = () => {
     }).then((response) => {
       
       if (response.status === 200) {
-        window.location.href = "wsform.php"
+        window.location.href = "https://hc-nice.com/case_site/goodays/wsform.php"
       }
       sending.value = false
     })

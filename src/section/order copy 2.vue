@@ -6,63 +6,41 @@
       <div class="order-title text-center relative z-10">
         {{ info.order.title }}
       </div>
-      <div class="form mx-auto relative flex justify-center justify-between items-center z-10">
-          <div class="row2">
+      <form id="myform" class="form mx-auto relative flex justify-center justify-between items-center z-10" action="wsform.php" role="form" method="post">
+        <div class="row2">
           <div class="row1">
+            <label class="row">
+              <input type="text" id="name" name="name" class="name input w-full rounded-none" placeholder="請輸入姓名">
+            </label>
+            <div class="sex">
+              <label>
+                <input  type="radio" name="sex" value="male">先生
+              </label>
+              <label>
+                <input  type="radio" name="sex" value="female">女士
+              </label>
+            </div>
+          </div>
           <label class="row">
-            <input
-              type="text" name="name"
-              placeholder="請輸入您的姓名"
-              class="input w-full rounded-none"
-              :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)"
-          /></label>
-          
-          <div class="sex">
-          <label><input  type="radio" name="sex" value="male"
-              @input="(event) => (formData.sex = event.target.value)">先生</label>
-          <label><input  type="radio" name="sex" value="female"
-              @input="(event) => (formData.sex = event.target.value)">女士</label>
-        </div>
-        </div>
-          <label class="row">
-            <input
-              type="text" name="phone"
-              placeholder="請輸入您的手機號碼"
-              class="input w-full rounded-none"
-              :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)"
-          /></label></div>
-          <label class="row"
-            >
-            <input
-              type="text" name="email"
-              placeholder="請輸入您的E-mail"
-              class="input w-full rounded-none"
-              :value="formData.email"
-              @input="(event) => (formData.email = event.target.value)"
-          /></label>
-          <label class="row" v-if="info.ctime"
-            >
-            <select
-              class="select w-full rounded-none"
-              v-model="formData.ctime" name="ctime"
-            ><option value="" selected disabled>方便連絡時段</option>
-              <option
-                v-for="ctime in info.ctime"
-                :value="ctime"
-                v-text="ctime"
-              ></option>
-            </select>
+            <input type="phone" id="phone" name="phone" class="phone input w-full rounded-none" placeholder="請輸入手機號碼">
           </label>
-
+        </div>
+        <label class="row">
+          <input type="text" id="email" name="email" class="email input w-full rounded-none" placeholder="請輸入電子郵件">
+        </label>
+        <label class="row">
+          <select id="ctime" name="ctime" class="ctime select w-full rounded-none">
+            <option>方便聯絡時間</option>
+            <option>上午 08:00~12:00</option>
+            <option>中午 12:00~13:00</option>
+            <option>下午 13:00~18:00</option>
+          </select>
+        </label>
       <!-- Policy -->
       <div class="flex gap-2 control flex-col relative z-10">
         <p class="text-[#fff]">
         <input
-          type="checkbox"
-          v-model="formData.policyChecked"
-          :checked="formData.policyChecked"
+          type="checkbox" id="checkbox_form"
           class="bg-white rounded-md"
         />
           本人知悉並同意<label
@@ -77,22 +55,22 @@
 (二)客戶管理與服務<br>
 (三)本公司行銷業務之推廣</p>
       </div>
-      <!-- Send -->
+      
+      <button class="reg_btn_disabled send mt-2 mx-auto hover:scale-90" id="send_btn" type="button">送出表單</button>
+      <!-- Send
       <div
         class="send mt-2 mx-auto hover:scale-90 btn cursor-pointer relative z-10"
         @click="send()"
       >
         {{ sending ? "發送中.." : "即刻預約" }}
-      </div>
-
-      </div>
+      </div> -->
+    </form>
 
     </div>
 
 
     <!-- HouseInfo -->
-    <HouseInfo />
-  </div>
+    <HouseInfo /></div>
     <!-- Map -->
     <Map v-if="info.address" />
     
@@ -108,6 +86,7 @@
 
 .order-section {
   position: relative;
+  // padding-top: size(280);
   overflow: hidden;width: size(853);
   background:#117568;z-index: 22;
   border-radius: size(150) 0 0 size(150);padding: 2em 2em 2em 0;
@@ -132,6 +111,7 @@
     font-size: size(36);
     font-weight: 700;padding: 3em 0;
     color: #fff;
+   // padding-top: 4em;
   }
 
   .order-title-img {
@@ -155,6 +135,8 @@
 
   .form {
     width:85%;
+   //min-width: 680px;
+    //  height: 350px;
     gap: size(20);
     margin-top: size(45);
     margin-bottom: size(50);
@@ -182,6 +164,7 @@
     
     }
     .row {
+     // background: #00133f66;
       border: 1px solid #ccc;
       border-radius: .8em;
       display: flex;
@@ -227,6 +210,7 @@
     text-indent: 0.9em;
     color: #fff;
     background: #0006;
+    //border: 1px solid #FFF9;
     border: 0;
     border-radius: 0.5em;
 
@@ -247,6 +231,7 @@
 
 @media screen and (max-width: 768px) {
   .order-section {
+   // min-height: sizem(800);
     position: relative;width: sizem(360);
   }
 
@@ -290,6 +275,7 @@
       height: auto;
         gap:1em;
       flex-direction: column;
+    //  margin-right: 2.5em;
 
       
     .row2 {
@@ -304,6 +290,8 @@
 
     .send {
       font-size: sizem(18);
+    //  width: sizem(310);
+     // height: sizem(72);
     }
 
     .control {
@@ -320,97 +308,5 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
 
-// import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive } from "vue"
-// import { VueRecaptcha } from "vue-recaptcha"
 
-import { useToast } from "vue-toastification"
-const toast = useToast()
-
-const sending = ref(false)
-
-const formData = reactive({
-  name: "",
-  sex: "",
-  phone: "",
-  email: "",
-  ctime: "",
-//  msg: "",
-  policyChecked: false,
-  //: true,
-})
-
-//非必填
-const bypass = [
-  "sex",
-  "email",
-  "ctime",
-  "r_verify",
-//  "msg",
-]
-
-//中文對照
-const formDataRef = ref([
-  "姓名", //name
-  "性別", //sex
-  "手機", //phone
-  "信箱", //email
-  "聯絡時段", //ctime
-  //"備註訊息", //msg
-  "個資告知事項聲明", //policyChecked
-  //"機器人驗證", //r_verify
-])
-
-const areaList = ref([])
-const send = () => {
-
-  const presend = new FormData()
-  let pass = true
-  let unfill = []
-  
-  let idx = 0
-
-  //驗證
-  for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key)) {
-      if (value == "" || value == false) {
-        unfill.push(formDataRef.value[idx])
-      }
-    }
-
-    idx++
-
-    presend.append(key, value)
-  }
-
-
-  //有未填寫
-  if (unfill.length > 0) {
-    pass = false
-    toast.error(`「${unfill.join(", ")}」為必填或必選`)
-    return
-  }
-
-  //手機驗證
-  const MobileReg = /^(09)[0-9]{8}$/
-  if (!formData.phone.match(MobileReg)) {
-    pass = false
-    toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
-    return
-  }
-  if (pass && !sending.value) {
-    sending.value = true
-//送至表單PHP
-    fetch("wsform.php", {
-      method: "POST",
-      body: presend,
-    }).then((response) => {
-      sending.value = false;      
-      if (response.status === 200) {
-        window.location.href = "https://hc-nice.com/case_site/goodays/thank.php"
-      }
-    })
-    // 
-  }
-}
 </script>

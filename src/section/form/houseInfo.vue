@@ -10,7 +10,7 @@
                     <div class="title  font-['Noto_Serif_TC']">建案資訊<img src="@\section\s5\b2.webp" alt="" /></div>
                     <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2 ">
                         <div class="item font-bold flex items-center w-full whitespace-nowrap"
-                            v-for="item in info.houseInfos">
+                            v-for="item in info.houseInfos" :key="item.houseInfos">
                             <p class="mr-2 border-r-2 border-[#F7931E] pr-2 text-[#000] font-[700]" v-html="item[0]"></p>
                             <p class="whitespace-pre-line leading-normal text-left text-[#333] font-normal"
                                 v-html="item[1]">
