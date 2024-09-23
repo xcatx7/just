@@ -34,7 +34,7 @@
   z-index: 3;
   
 .flower1{
-    @apply absolute;top:size(-285);right:size(695);width: size(518);z-index: 21;pointer-events: none;}
+    @apply absolute;top:size(-35);right:size(695);width: size(250);z-index: 21;pointer-events: none;}
     
 .flower2{
     @apply absolute;top:size(15);right:size(-75);width: size(285);z-index: 21;pointer-events: none;}
@@ -105,7 +105,7 @@
     }
   
   .flower1{
-    top:sizem(-80);right:sizem(160);width: sizem(200);}
+    top:sizem(-40);right:sizem(190);width: sizem(140);}
       
   .flower2{
     top:sizem(15);right:sizem(-70);width: sizem(150);}
