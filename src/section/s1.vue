@@ -16,9 +16,9 @@
       data-aos-duration="1600" />
     <img src="./s1/building.webp" class="building" alt="" />
     -->
-    <img src="./s1/01.png" class="img1 absolute" data-aos="fade" alt="" />
-    <img src="./s1/02.png" class="img2 absolute" data-aos="fade-left" alt="" />
-    <img src="./s1/03.png" class="img3 absolute" data-aos="fade-right" alt="" />
+    <img src="./s1/01.png" class="img1 absolute" data-aos="fade" alt="img1" />
+    <img src="./s1/02.webp" class="img2 absolute" data-aos="fade-left" alt="img2" />
+    <img src="./s1/03.webp" class="img3 absolute" data-aos="fade-right" alt="img3" />
     <div class="txt">
     <img
       src="./s1/logo.svg"
