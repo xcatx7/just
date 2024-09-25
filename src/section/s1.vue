@@ -81,11 +81,11 @@ const smoothScroll = inject("smoothScroll")
 const splide = ref()
 const imgs = [
   {
-    img: globals.$isMobile()?new URL("../section/s1/1m.jpg", import.meta.url).href:new URL("../section/s1/1.jpg", import.meta.url).href,
+    img:globals.$isMobile()?new URL("../section/s1/2m.jpg", import.meta.url).href: new URL("../section/s1/2.jpg", import.meta.url).href,
     caption: "",
   },
   {
-    img:globals.$isMobile()?new URL("../section/s1/2m.jpg", import.meta.url).href: new URL("../section/s1/2.jpg", import.meta.url).href,
+    img: globals.$isMobile()?new URL("../section/s1/1m.jpg", import.meta.url).href:new URL("../section/s1/1.jpg", import.meta.url).href,
     caption: "",
   },
 ]
