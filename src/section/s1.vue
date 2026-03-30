@@ -32,13 +32,9 @@
 .s1 {
   @apply relative w-full text-white flex items-center justify-center;
   height: auto;
-  // background-image: url("@/section/s5/0.jpg");
   background-size: cover;
           font-size: size(16);
           margin-bottom: size(50);
-      //   background: #fff;
-     //  &::before{content: "";position: absolute;top: 0;left: 0;background: #fff;width: 100%;height: 100%;z-index: -1;}
-
     .slide { @apply relative;
       z-index: 10;
       width:100%;

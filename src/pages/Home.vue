@@ -15,6 +15,7 @@
     class="home bg-[#fff] overflow-hidden font-['Noto_Sans_TC'] pb-[64px] md:pb-0"
   >
   <!-- div class="bgs1s2"</div> -->
+    <S0 />
     <S1 />
     <S2 />
     <S3 />
@@ -54,6 +55,7 @@ img {
 
 <script setup>
 import info from "@/info"
+import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
