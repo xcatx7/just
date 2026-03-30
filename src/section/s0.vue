@@ -5,7 +5,7 @@
       <!-- 輪播 -->
       <Splide ref="splide" class="slide" :options="{
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         interval: 4000,
         gap: 0,
         type: 'loop',
@@ -61,12 +61,16 @@
         @media (max-width: 767px) {
   font-size: sizem(16);
   margin-top: 0;
-  height: sizem(604);
+    align-items: flex-start;
+  // height: sizem(604);
 
         }
 .slider-wrapper{
     width: 100%;
-    height: 100%;}
+    height: 100%;
+        @media (max-width: 767px) {
+          height:auto;aspect-ratio: 10 / 7;
+        }}
   .slide {
     @apply relative;
    // z-index: 10;
@@ -158,6 +162,7 @@
     pointer-events: none;    /* 讓滑鼠事件穿透 */
     background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 (0.6 是透明度) */
         @media (max-width: 767px) {
+        position: relative;
           top: auto;
           bottom: 0;
                 right: auto;
