@@ -38,7 +38,7 @@ export default {
     ["建築設計", "閤康聯合建築師事務所"],
     ["企劃銷售", "翰永興業‧輝達行銷"],
   ],
-  gtmCode: ["GTM-KK69KQQT"], // 可放置多個
+  gtmCode: ["GTM-KK69KQQT","GTM-KLLBMSC6"], // 可放置多個
   
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
